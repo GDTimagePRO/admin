@@ -1,0 +1,10 @@
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\Description.txt
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\Views\GeneSysWidget\Configure.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\web.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\logo.jpg
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\Nop.Plugin.Widgets.GeneSysWidget.dll.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\Nop.Plugin.Widgets.GeneSysWidget.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.GeneSysWidget\Nop.Plugin.Widgets.GeneSysWidget.pdb
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.GeneSysWidget\obj\Debug\Nop.Plugin.Widgets.GeneSysWidget.csprojResolveAssemblyReference.cache
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.GeneSysWidget\obj\Debug\Nop.Plugin.Widgets.GeneSysWidget.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.GeneSysWidget\obj\Debug\Nop.Plugin.Widgets.GeneSysWidget.pdb

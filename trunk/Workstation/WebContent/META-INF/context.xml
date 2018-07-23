@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+  <Resource name="genesys_core" auth="Container" type="javax.sql.DataSource"
+        username="root"
+        password="QwertY123"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/genesys_core?zeroDateTimeBehavior=convertToNull"
+        maxActive="15"
+        maxIdle="7"
+        defaultTransactionIsolation="READ_COMMITTED"
+        validationQuery="Select 1" />
+</Context>

@@ -1,0 +1,289 @@
+body{
+	background: #689ac6;
+	height: 100%;
+}
+
+fieldset{
+	border-radius: 8px;
+	border-color: #848484;	
+}
+
+#container{
+	background: #FFFFFF;
+}
+
+.button{
+	width: 120px;
+	background: #A9CDED;
+	color: #417BAF;
+	font-weight: bold;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	/*-moz-box-shadow: 2px 2px 2px #000000;
+	-webkit-box-shadow: 2px 2px 2px #000000;
+	box-shadow: 2px 2px 2px #000000;*/
+	border: 1px solid #000000;
+}
+
+.addbutton{
+	float: right;
+	margin: 0 5px 0 10px;	
+}
+
+.button:hover{
+	cursor: pointer;
+}
+
+#title{
+	font-weight: bold;
+	font-size: 20pt;
+	text-align: center;
+}
+
+#inner{
+	text-align: center;
+}
+
+#surface{
+	background: #689ac6;
+}
+
+#blank{
+	height: 30px;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+#tools{
+	vertical-align: top;
+	
+}
+
+#textlines{
+	width: 100%;
+
+}
+
+.hidden{
+	display: none;
+}
+
+
+#zoom{
+	width: 275px;
+}
+
+#fade { 
+	display: none;
+	background: #000000;
+	position: absolute; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .50;
+	z-index: 9999;
+}
+
+.popup {
+	display: none;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 6px solid;
+	border-color: #000;
+	color: #000000;
+	background: #FFFFFF;
+	float: left;
+	position: absolute;
+	top: 50px; left: 50%;
+	margin-left: -400px;
+	z-index: 99999;
+	width: 800px;
+	height: 600px;
+	padding: 10px;
+	-moz-box-shadow: 5px 5px 7px #000;
+	box-shadow: 5px 5px 7px #000;
+}
+
+img#closebtn{
+	float: right;
+	margin-left: 50px;
+	/*margin-top: -50px;*/
+}
+
+/* CSS for addborder  */
+
+label.blocklabel{
+	display: block;
+	position: relative;
+	margin: 12px 0 px;	
+}
+
+label.blocklabel input{
+	position: relative;
+	left: 110px;
+	}
+
+.border, .table{
+	position: absolute;
+	left: 110px;
+	
+}
+
+
+.graphictab{
+	display: none;
+}
+
+.tabs_bar{
+	width: 100%;
+	background: #A9CDED;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px; 
+}
+
+.tab_button{
+	width: 200px;
+	background: #A9CDED;
+	/*border: 1px solid;
+	border-color: #417BAF;
+	
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;*/ 
+	margin: 2px;
+	font-weight: bold;
+	
+}
+
+.tab_button_selected{
+	width: 200px;
+	color: #FFFFFF;
+	background: #417BAF;
+	border: 1px solid;
+	border-color: #417BAF;
+	
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px; 
+	margin: 2px;
+	font-weight: bold;
+}
+
+.tab_button:hover{
+	cursor: pointer;
+}
+
+.tab_button_selected:hover{
+	cursor: pointer;
+}
+
+.imagelistselected{
+	border: 2px solid #000000;
+	
+}
+
+.object{
+	font-weight: bold;	
+	text-align: left; 		
+}
+
+.objectbutton{
+	
+	padding: 0 5px 0 5px;
+	width: 50px;
+}
+
+.object h3{
+	text-align: center;
+	
+}
+
+.object:hover{
+	cursor: pointer;
+}
+
+td.objectbox{
+	border: solid 2px #cecece;
+	vertical-align: top;
+	border-radius: 10px;
+	min-width: 325px;
+	padding: 20px;
+	
+}
+
+td.featurebox{
+	border: solid 2px #cecece;
+	vertical-align: top;
+	border-radius: 10px;
+	width: 200px;
+	padding: 20px;	
+	
+}
+
+.textlinebox{
+	border: solid 2px #cecece;
+	vertical-align: top;
+	border-radius: 10px;
+}
+
+#textlines{
+	border: solid 2px #cecece;
+	vertical-align: top;
+	border-radius: 10px;
+}
+
+#undo{
+	float: left;	
+	margin: 10px 10px 10px 0px;
+}
+
+#redo{
+	float: left;
+	margin: 10px;	
+}
+
+.objectleft {
+	float: left;
+	clear: both;
+}
+
+
+
+
+.fsPreview{
+	float: left; 
+	clear: both; 
+	width: 97%; 
+	vertical-align: center ;	
+}
+
+.divPreview{
+	text-align: center; 
+	padding: 25px; 
+	background: #417BAF;	
+}
+
+.librarygraphic {
+  max-width: 125px;
+  max-height: 125px;
+  width: expression(this.width > 125 ? "125px" : true);
+  height: expression(this.height > 125 ? "125px" : true);
+}
+
+ 

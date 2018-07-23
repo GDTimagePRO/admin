@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <Genesys translate="label" module="Genesys_Redirect">
+            <label>Genesys Config</label>
+            <sort_order>0</sort_order>
+        </Genesys>
+    </tabs>
+	<sections>
+		<Genesys_Redirect translate="label" module="Genesys_Redirect">
+			<label>Genesys Config Options</label>
+            <tab>Genesys</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+                <genesys_group translate="label" module="Genesys_Redirect">
+					<label>Genesys Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<genesys_url>
+							<label>Genesys URL</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</genesys_url>
+						<genesys_name>
+							<label>Customer ID</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</genesys_name>
+					</fields>
+				</genesys_group>
+            </groups>
+		</Genesys_Redirect>
+	</sections>
+</config>

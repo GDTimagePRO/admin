@@ -1,0 +1,68 @@
+﻿@model NewsletterBoxModel
+@using Nop.Web.Models.Newsletter;
+<div class="block-newsletter" style="margin-top:10px">
+    <div>
+        <span>
+            Stay up-to-date with the latest news & trendiest products direct to your inbox.
+        </span>
+    </div>
+    <div id="newsletter-subscribe-block" class="newsletter-subscribe-block" style="margin-top:10px">
+        <div class="newsletter-email">
+        @Html.TextBoxFor(x => x.NewsletterEmail, new { id = "newsletter-email", Value = "Enter Email Address", Style = "width:100%;color:#5c5b5b;" })
+        @Html.ValidationMessageFor(x => x.NewsletterEmail)
+        </div>
+        <div class="buttons" style="float:right">
+            <input type="button" value="Sign Up" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button" style="background-color:#5c5b5b;color:#FFFFFF;text-shadow:none;" />
+            <span id="subscribe-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
+        </div>
+    </div>
+    <div id="newsletter-result-block" class="newsletter-result-block">
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#newsletter-email").focus(function () {
+                if (this.value == 'Enter Email Address') {
+                    this.value = '';
+                }
+            });
+
+            $("#newsletter-email").blur(function () {
+                if (this.value == '') {
+                    this.value = 'Enter Email Address';
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('#newsletter-subscribe-button').click(function () {
+                
+                var email = $("#newsletter-email").val();
+                var subscribeProgress = $("#subscribe-loading-progress");
+                subscribeProgress.show();
+                $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "@(Url.RouteUrl("SubscribeNewsletter"))",
+                    data: { "email": email },
+                    success: function (data) {
+                        subscribeProgress.hide();
+                        $("#newsletter-result-block").html(data.Result);
+                         if (data.Success) {
+                            $('#newsletter-subscribe-block').hide();
+                            $('#newsletter-result-block').show();
+                         }
+                         else {
+                            $('#newsletter-result-block').fadeIn("slow").delay(2000).fadeOut("slow");
+                         }
+                    },
+                    error:function (xhr, ajaxOptions, thrownError){
+                        alert('Failed to subscribe.');
+                        subscribeProgress.hide();
+                    }  
+                });                
+                return false;
+            });
+        });
+    </script>
+</div>

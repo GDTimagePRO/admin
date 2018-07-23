@@ -1,0 +1,44 @@
+﻿@model FooterModel
+@using Nop.Web.Models.Common;
+
+<div class="footer">
+    <div id="footer_labels">
+		<span class="email_footer">Email</span>
+		<span class="phone_footer">Telephone</span>
+		<span class="hours_footer">Support Hours</span>
+		<span class="follow_footer">Follow Us</span>
+	</div>
+    <div class="footer-menu footer-menu-first">
+	<a style="text-decoration:none;color:#fff;" href="mailto:customerservice@masonrow.com">customerservice@masonrow.com</a>
+    <img class="dot" />
+	1.888.327.1599 or 312.300.6806
+	<img class="dot" />
+	Monday - Friday, 8am - 4pm EDT <img class="dot" /><a target="_blank" id="facebook" href="https://www.facebook.com/pages/Mason-Row/408710069196271"><img class="facebook"></a>
+        <a id="pinterest" href="http://pinterest.com/MasonRow/" target="_blank">
+            <img class="pinterest">
+        </a>
+    </div>
+    <ul class="footer_link">
+		<li><a class="footer_link" href="/">Home</a>
+		</li><li><a class="footer_link" href="/customer/info">Your Account</a>
+		</li><li><a class="footer_link" href="/contactus">Contact Us</a>
+		<li><a class="footer_link" href="/t/FAQ%20Page">FAQ</a>
+		<!--<li><a href="/t/privacyinfo" class="footer_link">Privacy</a>-->
+		</li><li><a class="footer_link" href="/t/aboutus">About Us</a>
+		<!--<li><a href="/" class="footer_link">In The News</a>-->
+		</li><li><a class="footer_link" href="/t/shippinginfo">Shipping Information</a></li>
+	</ul>
+    <div class="footer-poweredby">
+        Powered by <a href="http://www.nopcommerce.com/">nopCommerce</a>
+        @*Would you like to remove the "Powered by nopCommerce" link in the bottom of the footer?
+            Find more info here http://www.nopcommerce.com/copyrightremoval.aspx*@
+    </div>
+    <div class="footer-disclaimer">
+        @T("Content.CopyrightNotice", DateTime.Now.Year.ToString(), Model.StoreName)
+    </div>
+    <div class="footer-store-theme">
+        @Html.Action("StoreThemeSelector", "Common")
+    </div>
+    @Html.Action("ChangeDeviceBlock", "Common")
+    @Html.Widget("footer")
+</div>

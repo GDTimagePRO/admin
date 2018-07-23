@@ -1,0 +1,13 @@
+.element-div
+{
+    border-style: solid;
+    border-width:1px;
+    border-radius: 25px;
+    height: 140px;
+    padding-left:5px;
+}
+
+.modify-element-box-wrapper
+{
+    height:140px;
+}

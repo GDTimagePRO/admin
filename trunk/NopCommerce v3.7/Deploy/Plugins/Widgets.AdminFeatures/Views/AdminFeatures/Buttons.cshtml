@@ -1,0 +1,22 @@
+﻿@model ButtonsModel
+@using Nop.Plugin.Widgets.AdminFeatures.Models
+@{
+    foreach (Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel.Button b in Model.buttons)
+    {
+        if (b != null)
+        {
+            if (b.Select)
+            {
+                <input type="button" id="@b.Route" class="k-button" value="@b.Text" />
+            }
+            else if (b.Import)
+            {
+                <input type="button" id="@b.Route" name="@b.Route" class="k-button" value="@b.Text" />
+            }
+            else
+            {
+                <a href="@Url.Action(b.Route, "WidgetsAdminFeatures")" class="k-button">@b.Text</a>
+            }
+        }
+    }
+}

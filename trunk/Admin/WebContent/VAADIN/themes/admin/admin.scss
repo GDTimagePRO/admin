@@ -1,0 +1,93 @@
+/* Import the reindeer theme.*/
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../valo/valo";
+
+/* This contains all of your theme.*/
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin admin {
+  /* Include all the styles from the reindeer theme */
+  @include valo;
+
+  /* Insert your theme rules here */
+  .v-textfield {
+  	width: 245px;
+  }
+  
+  .v-select select {
+  	width: 245px;
+  }
+  
+  .v-textarea {
+  	width: 245px;
+  }
+  
+  .v-table-cell-content {
+  	height:27px;
+  }
+  
+  .h1 {
+  	margin-bottom: 0em;
+  }
+  
+  .filters-panel {
+  	height:27px;
+  	vertical-align: middle;
+  }
+  
+  .filters-panel input {
+  	margin-top: 2px;
+  }
+  
+  .filters-panel .v-customcomponent .v-button {
+  	margin-top: 2px;
+  }
+  
+  .buttons-right {
+  	float:right;
+  	margin-bottom: -49px;
+  	padding-top: 3px;
+  	padding-right: 5px;
+  	z-index: 9999;
+  	position: relative;
+  }
+  
+  .filter-button {
+  	padding: 0 16px 0 6px;
+  }
+  
+  .remove-button {
+  	margin-top: 3px;
+  	margin-left: 9px;
+  	width: 33px;
+  	text-align: center;
+  }
+  
+  .small-text-box {
+  	width: 50px;
+  	margin-right: 10px;
+  	margin-top: 5px;
+  	margin-bottom: 5px;
+  }
+  
+  .filter-checkbox {
+  	vertical-align: middle;
+  	text-align: center;
+  }
+  
+  .save-label {
+  	padding-left: 5px;
+  	vertical-align: middle;
+  	text-align: center;
+  	color: red;
+  }
+  
+  .welcome-label {
+  	padding-right: 5px;
+  	padding-top: 3px;
+  }
+  
+  .v-textarea {
+	resize: both;
+  }
+  
+}

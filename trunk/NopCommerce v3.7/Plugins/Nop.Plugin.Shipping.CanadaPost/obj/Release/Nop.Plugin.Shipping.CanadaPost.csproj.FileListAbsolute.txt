@@ -1,0 +1,9 @@
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Views\ShippingCanadaPost\Configure.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\web.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Description.txt
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\logo.jpg
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.pdb
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Release\Nop.Plugin.Shipping.CanadaPost.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Release\Nop.Plugin.Shipping.CanadaPost.pdb

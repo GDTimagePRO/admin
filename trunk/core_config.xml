@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Config>
+    <ProductCategories>
+        <Zooms>
+            <Zoom IsDefault="True">100</Zoom>
+            <Zoom>200</Zoom>
+            <Zoom>300</Zoom>
+            <Zoom>400</Zoom>
+        </Zooms>
+        <ProductCategory Name="Stamp">
+            <Products>
+                <Product Name="9010" Price="$24.99" LongName="9010 Rubber Stamp die 1 x 5/16 (inches)" Width="1.00" Height="0.3125" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9011" Price="$24.99" LongName="9011 Rubber Stamp die 1 1/2 x 1/2 (inches)" Width="1.5200" Height="0.5800" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9012" Price="$24.99" LongName="9012 Rubber Stamp die 1 7/8 x 3/4 (inches)" Width="1.8800" Height="0.7000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9013" Price="$24.99" LongName="9013 Rubber Stamp die 2 1/4 x 7/8 (inches)" Width="2.2500" Height="0.8750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9015" Price="$24.99" LongName="9015 Rubber Stamp die 2 11/16 x 1 3/16 (inches)" Width="2.6875" Height="1.1875" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9016" Price="$24.99" LongName="9016 Rubber Stamp die 2 11/16 x 3/8 (inches)" Width="2.6875" Height="0.375" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="2" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9026" Price="$24.99" LongName="9026 Rubber Stamp die 2 15/16 x 1 7/16 (inches)" Width="2.9375" Height="1.4375 " DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9027" Price="$24.99" LongName="9027 Rubber Stamp die 2 5/16 x 1 1/2 (inches)" Width="2.3125" Height="1.5000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9021" Price="$24.99" LongName="9021 Rubber Stamp die 7/16 x 7/16 (inches)" Width="0.4375" Height="0.4375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9022" Price="$24.99" LongName="9022 Rubber Stamp die 3/4 x 3/4 (inches)" Width="0.75" Height="0.75" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9023" Price="$24.99" LongName="9023 Rubber Stamp die 1 1/8 x 1 1/8 (inches)" Width="1.125" Height="1.125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="9024" Price="$24.99" LongName="9024 Rubber Stamp die 1 1/2 x 1 1/2 (inches)" Width="1.5" Height="1.5" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="5" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="S310" Price="$" LongName="S-310 Rubber Stamp 1/2 x 2 1/8 (inches)" Width="2.125" Height="0.5" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S311" Price="$" LongName="S-311 Rubber Stamp 3/8 x 2 3/4 (inches)" Width="2.750" Height="0.3750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S510" Price="$" LongName="S-510 Rubber Stamp 1/2 x 1/2 (inches)" Width="0.5" Height="0.5" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S520" Price="$" LongName="S-520 Rubber Stamp 3/4 x 3/4 (inches)" Width="0.75" Height="0.75" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S530" Price="$" LongName="S-530 Rubber Stamp 1 1/4 x 1 1/4 (inches)" Width="1.25" Height="1.25" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S542" Price="$" LongName="S-542 Rubber Stamp 1 5/8 x 1 5/8 (inches)" Width="1.6250" Height="1.6250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="5" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S820" Price="$" LongName="S-820 Rubber Stamp 1/4 x 1/2 (inches)" Width="0.50" Height="0.25" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S827" Price="$" LongName="S-827 Rubber Stamp 1 3/16 x 2 (inches)" Width="2.00" Height="1.3750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S829" Price="$" LongName="S-829 Rubber Stamp 1 9/16 x 2 1/2 (inches)" Width="2.50" Height="1.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="6" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S830" Price="$" LongName="S-830 Rubber Stamp 1 1/2 x 3 (inches)" Width="3.00" Height="1.5" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S831" Price="$" LongName="S-831 Rubber Stamp (inches)" Width="2.5624" Height="1.0625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="S832" Price="$" LongName="S-832 Rubber Stamp 5/8 x 2 15/16 (inches)" Width="2.9375" Height="0.6250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S833" Price="$" LongName="S-833 Rubber Stamp 1 x 3 1/4 (inches)" Width="3.250" Height="1.0" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S837" Price="$" LongName="S-837 Rubber Stamp 1 9/16 x 2 (inches)" Width="2.000" Height="1.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="6" MaxLines="12" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S841" Price="$" LongName="S-841 Rubber Stamp 3/8 x 1 (inches)" Width="1.0" Height="0.3750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S842" Price="$" LongName="S-842 Rubber Stamp 9/16 x 1 1/2 (inches)" Width="1.50" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S843" Price="$" LongName="S-843 Rubber Stamp 3/4 x 1 7/8 (inches)" Width="1.8750" Height="0.75" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S844" Price="$" LongName="S-844 Rubber Stamp 7/8 x 2 3/8 (inches)" Width="2.3750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S845" Price="$" LongName="S-845 Rubber Stamp 1 x 2 3/4 (inches)" Width="2.750" Height="1.0" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S846" Price="$" LongName="S-846 Rubber Stamp 1 1/16 x 2 9/16 (inches)" Width="2.5624" Height="1.0625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="S824" Price="$" LongName="S-824 Rubber Stamp 7/8 x 2 3/8 (inches) (22 x 58mm)" Width="2.3750" Height=".8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S825" Price="$" LongName="S-825 Rubber Stamp 1 x 2 3/4 (inches) (25 x 70mm)" Width="2.750" Height="1.0000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S1821" Price="$" LongName="S-1821 Rubber Stamp 3/8 x 1 (inches) (10 x 26mm)" Width="1.00" Height="0.3750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S1822" Price="$" LongName="S-1822 Rubber Stamp 9/16 x 1 1/2 (inches) (14 x 38 mm)" Width="1.500" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S1823" Price="$" LongName="S-1823 Rubber Stamp 3/4 x 1 7/8 (inches)(18 x 47mm)" Width="1.8750" Height="0.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S1824" Price="$" LongName="S-1824 Rubber Stamp 7/8 x 2 3/8 (inches)(22 x 58mm)"  Width="2.3750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S1825" Price="$" LongName="S-1825 Rubber Stamp 1 x 2 3/4 (inches)(25 x 70mm)" Width="2.750" Height="1.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S722" Price="$" LongName="S-722 Rubber Stamp 9/16 x 1 1/2 (inches)(14 x 38mm)" Width="1.500" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="S723" Price="$" LongName="S-723 Rubber Stamp 3/4 x 1 7/8 (inches)(18 x 47mm)" Width="1.8750" Height="0.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="H6000" Price="$" LongName="H-6000 Heavy Duty Stamp 15/16 x 1 5/8 (inches)(24 x 41mm)" Width="1.6250" Height="0.9375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6003" Price="$" LongName="H-6003 Heavy Duty Stamp 1 3/16 x 2 (inches)(30 x 50mm)" Width="2.000" Height="1.1875" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6004" Price="$" LongName="H-6004 Heavy Duty Stamp 1 x 2 3/16 (inches)(26 x 56mm)" Width="2.1875" Height="1.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6005" Price="$" LongName="H-6005 Heavy Duty Stamp 1 3/4 x 1 3/4 (inches)(45 x 45mm)" Width="1.750" Height="1.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6006" Price="$" LongName="H-6006 Heavy Duty Stamp 1 5/16 x 2 3/16 (inches)(33 x 56mm)" Width="2.1875" Height="1.3125" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6007" Price="$" LongName="H-6007 Heavy Duty Stamp 1 9/16 x 2 3/8 (inches)(40 x 60mm)" Width="2.3750" Height="1.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="5" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="H6008" Price="$" LongName="H-6008 Heavy Duty Stamp 1 7/8 x 2 5/8 (inches)(47 x 68mm)" Width="2.6250" Height="1.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="T842" Price="$" LongName="T-842 Rubber Stamp 9/16 x 1 1/2 (inches)(14 x 38mm)" Width="1.500" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="T843" Price="$" LongName="T-843 Rubber Stamp 3/4 x 1 7/8 (inches)(18 x 47mm)" Width="1.8750" Height="0.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="T844" Price="$" LongName="T-844 Rubber Stamp 7/8  x 2 3/8 (inches)(22 x 58mm)" Width="2.3750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="T845" Price="$" LongName="T-845 Rubber Stamp 1 x 2 3/4 (inches)(25 x 70 mm)" Width="2.750" Height="1.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="T830" Price="$" LongName="T-830 Rubber Stamp 1 1/2 x 3 (inches)(38 x 75mm)" Width="3.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="813P" LongName="813 Rubber Stamp die 1 x 5/16 (inches)" Width="1" Height="0.354" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="850P" LongName="850 Rubber Stamp die 15/16 x 3/16 (inches)" Width="1" Height="0.1968" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="1776" Price="$24.99" LongName="1776 Mark Self-Inkers 5/8 x 2 5/8 (inches)" Width="2.6250" Height="0.6250" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="3" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="1884" Price="$24.99" LongName="1884 Mark Self-Inkers 11/16 x 1 7/8 (inches)" Width="1.8750" Height="0.6875" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="2359" Price="$24.99" LongName="2359 Mark Self-Inkers 7/8 x 2 5/16 (inches)" Width="2.3125" Height="0.8750" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="3068" Price="$24.99" LongName="3068 Mark Self-Inkers 1 1/16 x 2 5/8 (inches)" Width="2.6250" Height="1.06250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="4978" Price="$24.99" LongName="4978 Mark Self-Inkers 1 9/16 x 3 (inches)" Width="3.000" Height="1.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="M10" Price="$24.99" LongName="M10 Rubber Stamp die 7/16 x 1 1/16 (inches)" Width="1.0625" Height="0.4375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M20" Price="$24.99" LongName="M20 Rubber Stamp die 9/16 x 1 1/2 (inches)" Width="1.5000" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M30" Price="$24.99" LongName="M30 Rubber Stamp die 3/4 X 1 15/16 (inches)" Width="1.9375" Height="0.7500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M40" Price="$24.99" LongName="M40 Rubber Stamp die 2 1/4 x 7/8 (inches)" Width="2.3750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M50" Price="$24.99" LongName="M50 Rubber Stamp die 1 1/8 x 2 3/4 (inches)" Width="2.750" Height="1.1250" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M60" Price="$24.99" LongName="M60 Rubber Stamp die 1 1/2 x 3 (inches)" Width="3.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M15" Price="$24.99" LongName="M15 Rubber Stamp die 7/16 x 2 3/4 (inches)" Width="2.750" Height="0.4375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M25" Price="$24.99" LongName="M25 Rubber Stamp die 5/8 x 3 (inches)" Width="3.000" Height="0.6250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M45" Price="$24.99" LongName="M45 Rubber Stamp die 1 x 3 1/4 (inches)" Width="3.250" Height="1.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M55" Price="$24.99" LongName="M55 Rubber Stamp die 1 9/16 x 2 3/8(inches)" Width="2.3750" Height="1.5625" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="SI15" Price="$24.99" LongName="SI-15 Rubber Stamp die 7/16 x 2 3/4 (inches)" Width="2.750" Height="0.4375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI25" Price="$24.99" LongName="SI-25 Rubber Stamp die 5/8 x 3 (inches)" Width="3.00" Height="0.6250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5205" Price="$24.99" LongName="SI-5205 Rubber Stamp die 1/2 X 1/2 (inches)" Width="0.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5210" Price="$24.99" LongName="SI-5210 Rubber Stamp die 3/4 x 3/4 (inches)" Width="0.750" Height="0.7500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5215" Price="$24.99" LongName="SI-5215 Rubber Stamp die 1 x 1 (inches)" Width="1.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5280" Price="$24.99" LongName="SI-5280 Rubber Stamp die 1 3/16 x 1 3/16 (inches)" Width="1.1875" Height="1.875" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5230" Price="$24.99" LongName="SI-5230 Rubber Stamp die 1 5/8 x 1 5/8 (inches)" Width="1.6250" Height="1.6250" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="5" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="SI5050" Price="$24.99" LongName="SI-5050 Rubber Stamp die 2 x 2 (inches)" Width="2.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="5" MaxLines="12" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="M100P" Price="" LongName="M100P Heavy Duty Self Inking Plain -die 15/16 x 1 11/16 (inches)(47 x 14 mm)" Width="1.6875" Height="0.9375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M300P" Price="" LongName="M300D Heavy Duty Self Inking Plain -die 1 3/16 x 1 13/16 (inches)(58 x 13 mm)" Width="1.375" Height="1.8125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="M400P" Price="" LongName="M100D Heavy Duty Self Inking Plain -die 1 1/8 x 2 3/8 (inches)(69 x 23 mm)" Width="2.375" Height="1.125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="HS1/2X1" Price="10.42" LongName="Woodmount Stamp 1/2 x 1" Width="0.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS1/2X2" Price="12.62" LongName="Woodmount Stamp 1/2 x 2" Width="0.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS1/2X3" Price="15.92" LongName="Woodmount Stamp 1/2 x 3" Width="0.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS1X1" Price="17.21" LongName="Woodmount Stamp 1 x 1" Width="1" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS1x2" Price="20.21" LongName="Woodmount Stamp 1 x 2" Width="1" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS1X3" Price="26.21" LongName="Woodmount Stamp 1 x 3" Width="1" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS11/2X1" Price="24.95" LongName="Woodmount Stamp 1 1/2x 1" Width="1.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS11/2x2" Price="27.95" LongName="Woodmount Stamp 1 1/2x 2" Width="1.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS11/2X3" Price="29.95" LongName="Woodmount Stamp 1 1/2x 3" Width="1.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS2X1" Price="21.56" LongName="Woodmount Stamp 2 x 1" Width="2" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS2x2" Price="27.96" LongName="Woodmount Stamp 2 x 2" Width="2" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS2X3" Price="36.76" LongName="Woodmount Stamp 2 x 3" Width="2" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS21/2X1" Price="23.16" LongName="Woodmount Stamp 2 1/2 x 1" Width="2.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS21/2x2" Price="31.16" LongName="Woodmount Stamp 2 1/2 x 2" Width="2.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS21/2X3" Price="41.56" LongName="Woodmount Stamp 2 1/2 x 3" Width="2.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS3X1" Price="25.56" LongName="Woodmount Stamp 3 x 1" Width="3" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS3x2" Price="34.36" LongName="Woodmount Stamp 3 x 2" Width="3" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS3X3" Price="46.36" LongName="Woodmount Stamp 3 x 3" Width="3" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS31/2X1" Price="27.16" LongName="Woodmount Stamp 3 1/2 x 1" Width="3.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS31/2x2" Price="37.56" LongName="Woodmount Stamp 3 1/2 x 2" Width="3.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS31/2X3" Price="51.16" LongName="Woodmount Stamp 3 1/2 x 3" Width="3.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS4X1" Price="28.76" LongName="Woodmount Stamp 4 x 1" Width="4" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS4x2" Price="40.76" LongName="Woodmount Stamp 4 x 2" Width="4" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS4X3" Price="55.16" LongName="Woodmount Stamp 4 x 3" Width="4" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS41/2X1" Price="31.16" LongName="Woodmount Stamp 4 1/2 x 1" Width="4.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS41/2x2" Price="43.96" LongName="Woodmount Stamp 4 1/2 x 2" Width="4.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS41/2X3" Price="59.96" LongName="Woodmount Stamp 4 1/2 x 3" Width="4.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS5X1" Price="32.76" LongName="Woodmount Stamp 5 x 1" Width="5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS5x2" Price="47.16" LongName="Woodmount Stamp 5 x 2" Width="5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS5X3" Price="64.76" LongName="Woodmount Stamp 5 x 3" Width="5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS51/2X1" Price="34.36" LongName="Woodmount Stamp 5 1/2 x 1" Width="5.5" Height="1" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS51/2x2" Price="50.36" LongName="Woodmount Stamp 5 1/2 x 2" Width="5.5" Height="2" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="HS51/2X3" Price="69.56" LongName="Woodmount Stamp 5 1/2 x 3" Width="5.5" Height="3" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="RS0619" LongName="Traditional Rubber Stamp 1/4 x 3/4 inches (6 x 19 mm)" Width="0.750" Height="0.250" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS0625" LongName="Traditional Rubber Stamp 1/4 x 1 inches (6 x 25 mm)" Width="1.000" Height="0.250" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS0638" LongName="Traditional Rubber Stamp 1/4 x 1 1/2 inches (6 x 38 mm)" Width="1.500" Height="0.250" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS0651" LongName="Traditional Rubber Stamp 1/4 x 2 inches (6 x 51 mm)" Width="2.000" Height="0.250" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1313" LongName="Traditional Rubber Stamp 1/2 x 1/2 inches (13 x 13 mm)" Width="0.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1319" LongName="Traditional Rubber Stamp 1/2 x 3/4 inches (13 x 19 mm)" Width="0.750" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1325" LongName="Traditional Rubber Stamp 1/2 x 1 inches (13 x 25 mm)" Width="1.000" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1338" LongName="Traditional Rubber Stamp 1/2 x 1 1/2 inches (6 x 13 mm)" Width="1.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1351" LongName="Traditional Rubber Stamp 1/2 x 2 inches (13 x 51 mm)" Width="2.000" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1364" LongName="Traditional Rubber Stamp 1/2 x 2 1/2 inches (13 x 64 mm)" Width="2.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1376" LongName="Traditional Rubber Stamp 1/2 x 3 inches (13 x 76 mm)" Width="3.000" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1389" LongName="Traditional Rubber Stamp 1/2 x 3 1/2 inches (13 x 89 mm)" Width="3.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1919" LongName="Traditional Rubber Stamp 3/4 x 3/4 inches (19 x 19 mm)" Width="0.750" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1925" LongName="Traditional Rubber Stamp 3/4 x 1 inches (19 x 25 mm)" Width="1.000" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1938" LongName="Traditional Rubber Stamp 3/4 x 1 1/2 inches (19 x 38 mm)" Width="1.500" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1951" LongName="Traditional Rubber Stamp 3/4 x 2 inches (19 x 51 mm)" Width="2.000" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1964" LongName="Traditional Rubber Stamp 3/4 x 2 1/2 inches (19 x 64 mm)" Width="2.500" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1976" LongName="Traditional Rubber Stamp 3/4 x 3 inches (19 x 76 mm)" Width="3.000" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS1989" LongName="Traditional Rubber Stamp 3/4 x 3 1/2 inches (19 x 89 mm)" Width="3.500" Height="0.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2525" LongName="Traditional Rubber Stamp 1 x 1 inches (25 x 25 mm)" Width="1.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2538" LongName="Traditional Rubber Stamp 1 x 1 1/2 inches (25 x 38 mm)" Width="1.500" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2551" LongName="Traditional Rubber Stamp 1 x 2 inches (25 x 51 mm)" Width="2.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2564" LongName="Traditional Rubber Stamp 1 x 2 1/2 inches (25 x 64 mm)" Width="2.500" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2576" LongName="Traditional Rubber Stamp 1 x 3 inches (25 x 76 mm)" Width="3.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS2589" LongName="Traditional Rubber Stamp 1 x 3 1/2 inches (25 x 89 mm)" Width="3.500" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS3838" LongName="Traditional Rubber Stamp 1 1/2 x 1 1/2 inches (38 x 38 mm)" Width="1.500" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS3851" LongName="Traditional Rubber Stamp 1 1/2 x 2 inches (38 x 51 mm)" Width="2.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS3864" LongName="Traditional Rubber Stamp 1 1/2 x 2 1/2 inches (38 x 64 mm)" Width="2.500" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS3876" LongName="Traditional Rubber Stamp 1 1/2 x 3 inches (38 x 76 mm)" Width="3.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS3889" LongName="Traditional Rubber Stamp 1 1/2 x 3 1/2 inches (38 x 89 mm)" Width="3.500" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS5151" LongName="Traditional Rubber Stamp 2 x 2 inches (51 x 51 mm)" Width="2.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS5164" LongName="Traditional Rubber Stamp 2 x 2 1/2 inches (51 x 64 mm)" Width="2.500" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS5176" LongName="Traditional Rubber Stamp 2 x 3 inches (51 x 76 mm)" Width="3.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS5189" LongName="Traditional Rubber Stamp 2 x 3 1/2 inches (51 x 89 mm)" Width="3.500" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS7676" LongName="Traditional Rubber Stamp 3 x 3 inches (76 x 76 mm)" Width="3.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="15" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS7689" LongName="Traditional Rubber Stamp 3 x 3 1/2 inches (76 x 89 mm)" Width="3.500" Height="3.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="15" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS6464" LongName="Traditional Rubber Stamp 2 1/2 x 2 1/2 inches (64 x 64 mm)" Width="2.500" Height="2.500" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="13" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS6476" LongName="Traditional Rubber Stamp 3 x 2 1/2 inches (64 x 76 mm)" Width="3.000" Height="2.500" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="13" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="RS6489" LongName="Traditional Rubber Stamp 3 1/2 x 3 1/2 inches (64 x 89 mm)" Width="3.500" Height="2.500" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="13" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="P635" Price="" LongName="TCI ProStamp P635 Custom Stamp 1 7/8 x 1 1/4" Width="1.8750" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="P645" Price="" LongName="TCI ProStamp P645 Custom Stamp 2 3/8 x 1-1/4" Width="2.3750" Height="1.25" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="P665" Price="" LongName="TCI ProStamp P665 Custom Stamp 2-1/4 x 1 1/2" Width="2.250" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+            </Products>
+        </ProductCategory>
+        <ProductCategory Name="Flash">
+            <Products>
+                <Product Name="EK1313" Price="$" LongName="EK-1313 Eminent Line Stamp Die 1/2 x 1/2 (inches)(13 x 13mm)" Width="0.500" Height="0.500" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK2323" Price="$" LongName="EK-2323 Eminent Line Stamp Die 7/8 x 7/8 (inches)(13 x 23mm)" Width="0.8750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK3012" Price="$" LongName="EK-3012 Eminent Line Stamp Die 1/2 x 1 3/16 (inches)(12 x 30mm)" Width="1.1875" Height="0.50" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK3914" Price="$" LongName="EK-3914 Eminent Line Stamp Die 9/16 x 1 1/2 (inches)(14 x 39mm)" Width="1.500" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK4217" Price="$" LongName="EK-4217 Eminent Line Stamp Die 11/16 x 1 5/8 (inches)(17 x 42mm)" Width="1.6250" Height="0.6875" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK4425" Price="$" LongName="EK-4425 Eminent Line Stamp Die 1 x 1 3/4 (inches)(25 x 44mm)" Width="1.750" Height="1.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK5020" Price="$" LongName="EK-5020 Eminent Line Stamp Die 3/4 x 2 (inches)(20 x 50mm)" Width="2.000" Height="0.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK5717" Price="$" LongName="EK-5717 Eminent Line Stamp Die 11/16 2 1/4 (inches)(17 x 57mm)" Width="2.5624" Height="1.0625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK6322" Price="$" LongName="EK-6322 Eminent Line Stamp Die 7/8 x 2 7/16 (inches)(22 x 63mm)" Width="2.4375" Height="0.8750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK5232" Price="$" LongName="EK-5232 Eminent Line Stamp Die 1 1/4 x 2 1/16 (inches)(32 x 52mm)" Width="2.0625" Height="1.250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK6035" Price="$" LongName="EK-6035 Eminent Line Stamp Die 1 3/8 x 2 3/8 (inches)(35 x 60mm)" Width="2.3750" Height="1.3750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK7030" Price="$" LongName="EK-7030 Eminent Line Stamp Die 1 3/16 x 2 3/4 (inches)(30 70mm)" Width="2.750" Height="1.1875" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK7727" Price="$" LongName="EK-7727 Eminent Line Stamp Die 1 1/16 x 3 (inches)(27 x 77mm)" Width="3.000" Height="1.0625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK7550" Price="$" LongName="EK-7550 Eminent Line Stamp Die 2 x 3 (inches)(50 x 70mm)" Width="3.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EK9975" Price="$" LongName="EK-9975 Eminent Line Stamp Die 3 x 4 (inches)(70 x 102mm)" Width="4.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="6" MaxLines="12" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="Alpha6" Price="$24.99" LongName="A6 Alpha Stamp die 1/2 x 1 3/4 (inches)" Width="1.750" Height="0.500" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha9" Price="$24.99" LongName="A9 Alpha Stamp die 11/16 x 2 1/8 (inches)" Width="2.751" Height="1.085" ContentAreaWidth="2.100" ContentAreaHeight="0.700" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha8" Price="$24.99" LongName="A8 Alpha Stamp die 9/16 x 3-1/8 (inches)" Width="3.836" Height="0.994" ContentAreaWidth="3.031" ContentAreaHeight="0.540" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha13" Price="$24.99" LongName="A13 Alpha Stamp die 7/8 x 2-1/2  (inches)" Width="3.210" Height="1.244" ContentAreaWidth="2.575" ContentAreaHeight="1.016" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="EA13" Price="$30.99" LongName="ENFOURCO A13 Alpha Flash Stamp die 7/8 x 2-1/2 (inches)" Width="3.210" Height="1.244" ContentAreaWidth="2.575" ContentAreaHeight="1.016" DefaultFont="Segoe UI" DefaultFontSize="13.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="100" />
+                <Product Name="Alpha16" Price="$24.99" LongName="A16 Alpha Stamp die 1 1/16 x 2 7/8 (inches)" Width="3.572" Height="1.440" ContentAreaWidth="2.797" ContentAreaHeight="0.985" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha25" Price="$24.99" LongName="A25 Alpha Stamp die 1 7/16 x 3 1/8 (inches)" Width="3.125" Height="1.4375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha33" Price="$24.99" LongName="A33 Alpha Stamp die 1 3/4 x 3 3/4 (inches)" Width="3.750" Height="1.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha36" Price="$24.99" LongName="A36 Alpha Stamp die 2 1/4 x 3 3/4 (inches)" Width="3.750" Height="2.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="6" MaxLines="12" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Alpha39" Price="$24.99" LongName="A39 Alpha Stamp die 3 1/8 x 4 1/2  (inches)" Width="4.500" Height="3.1250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="7" MaxLines="15" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="Omega6" Price="$24.99" LongName="B6 Omega Stamp die 9/16 x 1 13/16 (inches)" Width="1.8125" Height="0.5625" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega8" Price="$24.99" LongName="B8 Omega Stamp die 5/8 x 3 1/4 (inches)" Width="3.250" Height="0.6250" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega9" Price="$24.99" LongName="B9 Omega Stamp die 3/4 x 2 1/8 (inches)" Width="2.1250" Height="0.750" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega13" Price="$24.99" LongName="B13 Omega Stamp die 15/16 x 2 5/8  (inches)" Width="2.6250" Height="0.9375" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega16" Price="$24.99" LongName="B16 Omega Stamp die 1 1/8 x 3 (inches)" Width="3.000" Height="1.1250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega25" Price="$24.99" LongName="B25 Omega Stamp die 1 1/2 x 3 1/4 (inches)" Width="3.125" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega33" Price="$24.99" LongName="B33 Omega Stamp die 1 7/8 x 3 7/8 (inches)" Width="3.8750" Height="1.8750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="5" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega36" Price="$24.99" LongName="B36 Omega Stamp die 2 3/8 x 3 7/8 (inches)" Width="3.8750" Height="2.3750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="7" MaxLines="13" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Omega39" Price="$24.99" LongName="B39 Omega Stamp die 3 1/4 x 4 5/8  (inches)" Width="4.6250" Height="3.1250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="8" MaxLines="16" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="PSI1919" Price="$24.99" LongName="PSI 1919 Flash Stamp die 3/4 x 3/4 (inches)" Width="1.445" Height="1.155" ContentAreaWidth="0.800" ContentAreaHeight="0.800" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI1444" Price="$25.99" LongName="PSI 1444 Flash Stamp die 1/2 x 1-3/4 (inches)" Width="2.305" Height="0.957" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI1854" Price="$26.99" LongName="PSI 1854 Flash Stamp die 11/16 x 2-1/8 (inches)" Width="2.791" Height="1.105" ContentAreaWidth="2.100" ContentAreaHeight="0.700" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI1479" Price="$22.49" LongName="PSI 1479 Flash Stamp die 9/16 x 3-1/8 (inches)" Width="3.836" Height="0.994" ContentAreaWidth="3.031" ContentAreaHeight="0.540" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI2264" Price="$30.99" LongName="PSI 2264 Flash Stamp die 7/8 x 2-1/2 (inches)" Width="3.250" Height="1.244" ContentAreaWidth="2.575" ContentAreaHeight="1.016" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI2773" Price="$33.99" LongName="PSI 2773 Flash Stamp die 1 1/16 x 2-7/8 (inches)" Width="3.612" Height="1.480" ContentAreaWidth="2.797" ContentAreaHeight="0.985" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI3679" Price="$38.79" LongName="PSI 3679 Flash Stamp die 1 7/16 x 3-1/8 (inches)" Width="4.098" Height="1.900" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="3" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI3255" Price="$38.79" LongName="PSI 3255 Flash Stamp die 1 1/4 x 2-1/4 (inches)" Width="3.104" Height="1.724" ContentAreaWidth="2.187" ContentAreaHeight="1.300" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSI4141" Price="$37.99" LongName="PSI 4141 Flash Stamp die 1 5/8 x 1-5/8 (inches)" Width="2.130" Height="2.030" ContentAreaWidth="1.450" ContentAreaHeight="1.450" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="DYO1919" Price="$24.99" LongName="PSI 1919 Flash Stamp die 3/4 x 3/4 (inches)" Width="1.445" Height="1.155" ContentAreaWidth="0.800" ContentAreaHeight="0.800" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO1444" Price="$25.99" LongName="PSI 1444 Flash Stamp die 1/2 x 1-3/4 (inches)" Width="2.305" Height="0.957" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO1854" Price="$26.99" LongName="PSI 1854 Flash Stamp die 11/16 x 2-1/8 (inches)" Width="2.791" Height="1.105" ContentAreaWidth="2.100" ContentAreaHeight="0.700" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO1479" Price="$22.49" LongName="PSI 1479 Flash Stamp die 9/16 x 3-1/8 (inches)" Width="3.836" Height="0.994" ContentAreaWidth="3.031" ContentAreaHeight="0.540" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO2264" Price="$30.99" LongName="PSI 2264 Flash Stamp die 7/8 x 2-1/2 (inches)" Width="3.612" Height="1.244" ContentAreaWidth="2.575" ContentAreaHeight="1.016" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO2773" Price="$33.99" LongName="PSI 2773 Flash Stamp die 1 1/16 x 2-7/8 (inches)" Width="3.612" Height="1.480" ContentAreaWidth="2.797" ContentAreaHeight="0.985" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO3679" Price="$38.79" LongName="PSI 3679 Flash Stamp die 1 7/16 x 3-1/8 (inches)" Width="4.098" Height="1.900" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="3" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO3255" Price="$38.79" LongName="PSI 3255 Flash Stamp die 1 1/4 x 2-1/4 (inches)" Width="3.104" Height="1.724" ContentAreaWidth="2.187" ContentAreaHeight="1.300" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="DYO4141" Price="$37.99" LongName="PSI 4141 Flash Stamp die 1 5/8 x 1-5/8 (inches)" Width="2.130" Height="2.030" ContentAreaWidth="1.450" ContentAreaHeight="1.450" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="PSIBlue1919" Price="$24.99" LongName="PSI 1919 Flash Stamp die 3/4 x 3/4 (inches)" Width="1.445" Height="1.155" ContentAreaWidth="0.800" ContentAreaHeight="0.800" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue1444" Price="$25.99" LongName="PSI 1444 Flash Stamp die 1/2 x 1-3/4 (inches)" Width="2.305" Height="0.957" ContentAreaWidth="1.732" ContentAreaHeight="0.551" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue1854" Price="$26.99" LongName="PSI 1854 Flash Stamp die 11/16 x 2-1/8 (inches)" Width="2.791" Height="1.105" ContentAreaWidth="2.100" ContentAreaHeight="0.700" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue1479" Price="$22.49" LongName="PSI 1479 Flash Stamp die 9/16 x 3-1/8 (inches)" Width="3.836" Height="0.994" ContentAreaWidth="3.031" ContentAreaHeight="0.540" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue2264" Price="$30.99" LongName="PSI 2264 Flash Stamp die 7/8 x 2-1/2 (inches)" Width="3.610" Height="1.244" ContentAreaWidth="2.575" ContentAreaHeight="1.016" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="6" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue2773" Price="$33.99" LongName="PSI 2773 Flash Stamp die 1 1/16 x 2-7/8 (inches)" Width="3.572" Height="1.480" ContentAreaWidth="2.797" ContentAreaHeight="0.985" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue3679" Price="$38.79" LongName="PSI 3679 Flash Stamp die 1 7/16 x 3-1/8 (inches)" Width="4.098" Height="1.900" ContentAreaWidth="2.992" ContentAreaHeight="1.331" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="3" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue3255" Price="$38.79" LongName="PSI 3255 Flash Stamp die 1 1/4 x 2-1/4 (inches)" Width="3.104" Height="1.724" ContentAreaWidth="2.187" ContentAreaHeight="1.300" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="PSIBlue4141" Price="$37.99" LongName="PSI 4141 Flash Stamp die 1 5/8 x 1-5/8 (inches)" Width="2.130" Height="2.030" ContentAreaWidth="1.450" ContentAreaHeight="1.450" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+
+                <Product Name="XL275"  Price="" LongName="XL2- 75 Flash Stamp die 1/2 x 1 11/16 (inches)" Width="1.6875" Height="0.500" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2115" Price="" LongName="XL2- 115 Flash Stamp die 11/16 x 1 15/16 (inches)(47 x 14 mm)" Width="1.9375" Height="0.6875" DefaultFont="Arial" DefaultFontSize="9.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2125" Price="" LongName="XL2- 125 Flash Stamp die 1 x 2 (inches)(48 x 23 mm)" Width="2.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2145" Price="" LongName="XL2- 145 Flash Stamp die 5/8 x 2 7/16 (inches)(58 x 13 mm)" Width="2.4375" Height="0.6250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2165" Price="" LongName="XL2- 165 Flash Stamp die 1 1/2 x 2 1/2 (inches)(60 x 35 mm)" Width="2.500" Height="1.500" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7"  AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2185" Price="" LongName="XL2- 185 Flash Stamp die 15/16 x 2 13/16 (inches)(69 x 23 mm)" Width="2.8125" Height="0.9375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2225" Price="" LongName="XL2- 225 Flash Stamp die 2 1/16 x 3 (inches)(72 x 48 mm)" Width="3.000" Height="2.0625" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="4" MaxLines="10" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2245" Price="" LongName="XL2- 245 Flash Stamp die 1 1/4 x 3 3/16 (inches)(80 x 29 mm)" Width="3.1875" Height="1.250" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="2" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2265" Price="" LongName="XL2- 265 Flash Stamp die 11/16 x 3 5/16 (inches)(80 x 14 mm)" Width="3.125" Height="0.6875" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2275" Price="" LongName="XL2- 275 Flash Stamp die 1 7/8 x 3 7/8 (inches)(97 x 47 mm)" Width="3.875" Height="1.875" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2700" Price="" LongName="XL2- 700 Flash Stamp die 2 3/4 x 3 3/4 (inches)(91 x 66 mm)" Width="3.750" Height="2.750" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="6" MaxLines="12" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2720" Price="" LongName="XL2- 720 Flash Stamp die 1 x 4 (inches)(98 x 22 mm)" Width="4.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2750" Price="" LongName="XL2- 750 Flash Stamp die 1 1/2 x 4 3/4 (inches(127 x 42 mm)" Width="4.750" Height="1.500" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="4" MaxLines="8" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL2800" Price="" LongName="XL2- 800 Flash Stamp die 3 1/8  x 4 1/2 (inches)(118 x 29 mm)" Width="4.500" Height="3.125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="6" MaxLines="14" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL23535" Price="" LongName="XL2- 3535 Flash Stamp die 1 3/8 x 1 3/8 (inches)(35 x 35 mm)" Width="1.375" Height="1.375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL25050" Price="" LongName="XL2- 5050 Flash Stamp die 2 x 2 (inches)(50 x 50 mm)" Width="2.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="9" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="XL255" Price="" LongName="XL2- 55 Flash Stamp die 3/16 x 2 1/2 (inches)" Width="2.50" Height="0.1875" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="1" AllowPicture="True" OrderListZoom="80" />
+
+            </Products>
+        </ProductCategory>
+        <ProductCategory Name="Dater">
+            <Products>
+                <Product Name="750" LongName="750 Dater Rubber Dater die 1 1/2 x 1 (inches)" Width="1.653" Height="0.98425" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="1" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X="0.16" Y="0.23" Width="1.25" Height="0.472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="724" LongName="724 Dater Rubber Dater die 1 1/2 x 1 1/2 (inches)" Width="1.614" Height="1.614" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X="0.16" Y="0.5518" Width="1.25" Height="0.393" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="727" LongName="727 Dater Rubber Dater die 2 15/16 x 1 1/2 (inches)" Width="2.40" Height="1.614" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".600" Y=".630" Width="1.250" Height="0.393" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M400D" Price="" LongName="M400D Heavy Duty Self Inking Dater -die 1 1/8 x 2 3/8 (inches)(59 x 28 mm)" Width="2.375" Height="1.125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X=".5901" Y=".3141" Width="1.1811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M300D" Price="" LongName="M300D Heavy Duty Self Inking Dater -die1 1 3/16 x 1 13/16 (inches)(47 x 31 mm)" Width="1.8125" Height="1.1875" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".3149" Y=".3543" Width="1.1811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M600D" Price="" LongName="M600D Heavy Duty Self Inking Dater -die 1 1/2 x 2 5/16 (inches)(59 x 38 mm)" Width="2.3125" Height="1.500" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X="1.7511" Y="1.4724" Width="1.250" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M800D" Price="" LongName="M800D Heavy Duty Self Inking Dater -die1 1 7/8 2 11/16 (inches)(69 x 48 mm)" Width="2.6875" Height="1.8750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".7480" Y=".7086" Width="1.1811" Height=".48" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M100D"  Price="" LongName="M100D Heavy Duty Self Inking Dater -die 15/16 x 1 11/16 (inches)(43 x 24 mm)" Width="1.6875" Height="0.9375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X=".2362" Y=".2362" Width="1.1811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M510D"  Price="" LongName="M510D Heavy Duty Self Inking Dater -die 1 5/8 x 2 7/16 (inches)(61 x 41 mm)" Width="2.4375" Height="1.6250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X=".5906" Y=".5512" Width="1.811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M4015D"  Price="" LongName="M401.5D Heavy Duty Self Inking Dater -die 1 1/4 x 1 1/2 (inches)(38 x 32 mm)" Width="1.50" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X=".1575" Y=".3940" Width="1.1811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="M310D"  Price="" LongName="M310D Heavy Duty Self Inking Dater -die 7/8 x 1 3/8 (inches)(22 x 34 mm)" Width="1.3750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80" >
+                    <Cutouts>
+                        <Cutout X=".0787" Y=".19695" Width="1.811" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="P630" LongName="TCI ProStamp P630 Custom Dater 1-7/8 x 1 1/4 (inches)(47 x 31 mm)" Width="1.8750" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".3150" Y=".3543" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="P640" LongName="TCI ProStamp P640 Custom Dater 2 3/8 x 1  1/4 (inches)(60 x 31 mm)" Width="2.3750" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5901" Y=".3543" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="P660" LongName="TCI ProStamp P660 Custom Dater 2 1/4 x 1 1/2 (inches)(57 x 38 mm)" Width="2.250" Height="1.5" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S530D" LongName="Printer Line S-530D Custom Dater 1 1/4 x 1 1/4 (inches)(32 x 32mm)" Width="1.25" Height="1.125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S542D" LongName="Printer Line S-542D Custom Dater 1 5/8 x 1 5/8 (inches)(42 x 42mm)" Width="1.6250" Height="1.6250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S826D" LongName="Printer Line S-826D Custom Dater 15/16 x 1 5/8 (inches)(24 x 41mm)" Width="2.00" Height="1.00" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S827D" LongName="Printer Line S-827D Custom Dater 1 3/16 x 2 (inches)(30 x 50mm)" Width="2.000" Height="1.1875" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S828D" LongName="Printer Line S-828D Custom Dater 1 1/4 x 2 3/16 (inches) (33 x 56mm)" Width="2.1875" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S837D" LongName="Printer Line S-837D Custom Dater 1 9/16 x 2 (inches) (40 x 50mm)" Width="2.000" Height="1.5626" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S829D" LongName="Printer Line S-829D Custom Dater 1 9/16 x 2 1/2 (inches) (40 x 64mm)" Width="2.500" Height="1.5625" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S830D" LongName="Printer Line S-830D Custom Dater 1 1/2 x 3 (inches) (38 x 75mm)" Width="3.000" Height="1.5" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="SI5230D" LongName="Printer Line S.I. 5230D Custom Dater 1 5/8 x 1 5/8 (inches) (42 x 42mm)" Width="1.6250" Height="1.6250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6100" LongName="Heavy Duty H-6100 Custom Dater 15/16 x 1 5/8 (inches) (24 x 41mm)" Width="1.6250 " Height="0.9375" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6101" LongName="Heavy Duty H-6101 Custom Dater 1 1/4 x 1 1/2 (inches) (32 x38mm)" Width="1.500" Height="1.25" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6103" LongName="Heavy Duty H-6103 Custom Dater 1 3/16 x 2 (inches) (30 x 50mm)" Width="2.000" Height="1.1875" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6104" LongName="Heavy Duty H-6104 Custom Dater 1 x 2 3/16 (inches) (26 x 56mm)" Width="2.1875" Height="1.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6105" LongName="Heavy Duty H-6105 Custom Dater 1 3/4 x 1 3/4 (inches) (45 x 45mm)" Width="1.750" Height="1.750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6106" LongName="Heavy Duty H-6106 Custom Dater 1 5/16 x 2 3/16 (inches) (33 x 56mm)" Width="2.1875" Height="1.3125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6107" LongName="Heavy Duty H-6107 Custom Dater 1 9/16 x 2 3/8 (inches) (40 x 60mm)" Width="2.3750" Height="1.5625" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6108" LongName="Heavy Duty H-6108 Custom Dater 1 7/8 x 2 5/8 (inches) (47 x 68mm)" Width="2.6250" Height="1.8750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H61608" LongName="Heavy Duty H-61608 Custom Dater 1 5/16 x 2 3/16 (inches) (33 x 56mm)" Width="2.1875" Height="1.3125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6558PL" LongName="Heavy Duty H-6558 Custom Dater 1 5/16 x 2 3/16 (inches) (33 x 56mm)" Width="2.1875" Height="1.3125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6510PL" LongName="Heavy Duty H-6510 Custom Dater 1 5/16 x 2 3/16 (inches) (33 x 56mm)" Width="2.1875" Height="1.3125" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6418PL" LongName="Heavy Duty H-6418 Custom Dater 1 1/4 x 2 3/4 (inches) (30 x 68mm)" Width="2.750" Height="1.25" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="H6410DN" LongName="Heavy Duty H-6410/DN Custom Dater 1 1/4 x 2 3/4 (inches) (30 x 68mm)" Width="2.750" Height="1.25" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S32001" LongName="Die Plate S-3200-1 Custom Dater 1 1/8 x 1 5/8 (inches) (30 x 41mm)" Width="1.6250" Height="1.1250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S36002" LongName="Die Plate S-3600-2 Custom Dater 1 3/8 x 2 3/16 (inches) (35 x 55mm)" Width="2.1875" Height="1.3750" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S36003" LongName="Die Plate S-3600-3 Custom Dater 1 1/2 x 2 3/16 (inches) (40 x 50mm)" Width="2.1875" Height="1.5" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="6" MaxTopLines="3" MaxBottomLines="3" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S36005" LongName="Die Plate S-3600-5 Custom Dater 2 x 2 3/4 (inches) (51 x70mm)" Width="2.750" Height="2.000" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S36007" LongName="Die Plate S-3600-7 Custom Dater 2 x 2 (inches) (51 x51mm)" Width="2.00" Height="2.00" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="4" MaxLines="8" MaxTopLines="4" MaxBottomLines="4" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S10006" LongName="Inspection Stamps S-1000-6 Custom Dater 3/4 x 3/4 (inches) (20 x 20mm)" Width="0.750" Height="0.75" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="1" MaxLines="2" MaxTopLines="1" MaxBottomLines="1" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S12005" LongName="Inspection Stamps Custom Dater 1 x 1 (inches) (25 x 25mm)" Width="1.00" Height="1.00" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+                <Product Name="S15007" LongName="Inspection Stamps Custom Dater 1 1/4 x 1 1/4 (inches) (31 x 31mm)" Width="1.25" Height="1.250" DefaultFont="Arial" DefaultFontSize="10.00" DefaultLines="2" MaxLines="4" MaxTopLines="2" MaxBottomLines="2" AllowPicture="False" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".5118" Y=".5118" Width="1.25" Height=".472" Style="Square" Engrave="False" />
+                    </Cutouts>
+                </Product>
+            </Products>
+        </ProductCategory>
+        <ProductCategory Name="Badge">
+            <Products>
+                <Product Name="Badge" LongName="Badge 1 1/2 x 3 (inches)" Width="3.0000" Height="1.5000" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="3/4x23/4Badge" LongName="Badge 3/4 x 2 3/4 (inches)" Width="2.75" Height="0.75" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="1x3Badge" LongName="Badge 1 x 3 (inches)" Width="3.0000" Height="1" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="11/2x3Badge" LongName="Badge 1 1/2 x 3 (inches)" Width="3.0000" Height="1.5000" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="11/2x23/4Badge" LongName="Badge 1 1/2 x 3 3/4 (inches)" Width="2.7500" Height="1.5000" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="75X275Badge" LongName="Badge 3/4 x 2 3/4 (inches)" Width="2.75" Height="0.75" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+                <Product Name="15X3Badge" LongName="Badge 1 1/2 x 3 (inches)" Width="3.0000" Height="1.5000" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="3" MaxLines="4" AllowPicture="True" OrderListZoom="60" />
+            </Products>
+            <Materials>
+                <Material MaterialId="1" />
+                <Material MaterialId="2" />
+                <Material MaterialId="3" />
+                <Material MaterialId="4" />
+                <Material MaterialId="5" />
+                <Material MaterialId="6" />
+                <Material MaterialId="7" />
+                <Material MaterialId="8" />
+                <Material MaterialId="9" />
+                <Material MaterialId="10" />
+                <Material MaterialId="11" />
+                <Material MaterialId="12" />
+                <Material MaterialId="13" />
+                <Material MaterialId="14" />
+                <Material MaterialId="15" />
+            </Materials>
+            <Zooms>
+                <Zoom>50</Zoom>
+                <Zoom>75</Zoom>
+                <Zoom IsDefault="True">100</Zoom>
+                <Zoom>200</Zoom>
+            </Zooms>
+        </ProductCategory>
+        <ProductCategory Name="Sign">
+            <Products>
+                <Product Name="SmPanel" LongName="Electrical Panel Sign 1 1/2 x 7/16 (inches)" Width="1.500" Height="0.4375" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="LgPanel" LongName="Electrical Panel Sign 1 1/2 x 7/8 (inches)" Width="1.500" Height="0.8750" DefaultFont="Arial" DefaultFontSize="12.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="80" />
+                <Product Name="Sign" LongName="Sign 2 x 8 (inches)" Width="8.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="1X8Sign" LongName="Sign 1 x 8 (inches)" Width="8.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="30.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="1X10Sign" LongName="Sign 1 x 10 (inches)" Width="10.000" Height="1.000" DefaultFont="Arial" DefaultFontSize="30.00" DefaultLines="1" MaxLines="2" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="15X4Sign" LongName="Sign 1 1/2 x 4 (inches)" Width="4.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="15X6Sign" LongName="Sign 1 1/2 x 6 (inches)" Width="6.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="15X8Sign" LongName="Sign 1 1/2 x 8 (inches)" Width="8.000" Height="1.500" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="2X4Sign" LongName="Sign 2 x 4 (inches)" Width="4.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="2X6Sign" LongName="Sign 2 x 6 (inches)" Width="6.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="2X8Sign" LongName="Sign 2 x 8 (inches)" Width="8.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="2X10Sign" LongName="Sign 2 x 10 (inches)" Width="10.000" Height="2.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="2" MaxLines="3" AllowPicture="True" OrderListZoom="40" />
+                <Product Name="3X6Sign" LongName="Sign 3 x 6 (inches)" Width="6.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="3X8Sign" LongName="Sign 3 x 8 (inches)" Width="8.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="3X10Sign" LongName="Sign 3 x 10 (inches)" Width="10.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="3x12Sign" LongName="Sign 3 x 12 (inches)" Width="12.000" Height="3.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="5" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="4x8Sign" LongName="Sign 4 x 8 (inches)" Width="8.000" Height="4.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="4X10Sign" LongName="Sign 4 x 10 (inches)" Width="10.000" Height="4.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="30" />
+                <Product Name="6X12Sign" LongName="Sign 6 x 12 (inches)" Width="12.000" Height="6.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="8" AllowPicture="True" OrderListZoom="20" />
+                <Product Name="8x12Sign" LongName="Sign 8 x 12 (inches)" Width="12.000" Height="8.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="10" AllowPicture="True" OrderListZoom="20" />
+                <Product Name="10X10Sign" LongName="Sign 10 x 10 (inches)" Width="10.000" Height="10.000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="12" AllowPicture="True" OrderListZoom="20" />
+                <Product Name="12X10Sign" LongName="Sign 12 x 10 (inches)" Width="12.0000" Height="10.0000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="12" AllowPicture="True" OrderListZoom="20" />
+                <Product Name="14X10Sign" LongName="Sign 14 x 10 (inches)" Width="14.0000" Height="10.0000" DefaultFont="Arial" DefaultFontSize="42.00" DefaultLines="3" MaxLines="12" AllowPicture="True" OrderListZoom="20" />
+            </Products>
+            <Materials>
+                <Material MaterialId="1" />
+                <Material MaterialId="2" />
+                <Material MaterialId="3" />
+                <Material MaterialId="4" />
+                <Material MaterialId="5" />
+                <Material MaterialId="6" />
+                <Material MaterialId="7" />
+                <Material MaterialId="8" />
+                <Material MaterialId="9" />
+                <Material MaterialId="10" />
+                <Material MaterialId="11" />
+                <Material MaterialId="12" />
+                <Material MaterialId="13" />
+                <Material MaterialId="14" />
+                <Material MaterialId="15" />
+            </Materials>
+            <Zooms>
+                <Zoom IsDefault="True">40</Zoom>
+                <Zoom>100</Zoom>
+            </Zooms>
+        </ProductCategory>
+        <ProductCategory Name="Tag">
+            <Products>
+                <Product Name="Luggage Tag" LongName="Luggage Tag 3 3/8 x 2 1/8 (inches)" Width="3.3750" Height="2.1250" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="60">
+                    <Cutouts>
+                        <Cutout X=".23" Y=".8" Width=".125" Height=".5" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+                <Product Name="Luggage" LongName="Luggage Tag 3 3/8 x 2 1/8 (inches)" Width="3.3750" Height="2.1250" DefaultFont="Arial" DefaultFontSize="18.00" DefaultLines="4" MaxLines="7" AllowPicture="True" OrderListZoom="60">
+                    <Cutouts>
+                        <Cutout X=".23" Y=".8" Width=".125" Height=".5" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+                <Product Name="Key" LongName="Key Tag  3/4 x 2 (inches)" Width="2.0" Height="0.750" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".23" Y=".15" Width=".25" Height=".50" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+                <Product Name="Dog" LongName="Pet Tag  7/8 x 7/8 (inches)" Width="0.8750" Height="0.8750" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="4" AllowPicture="True" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".15" Y=".45" Width=".25" Height=".60" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+                <Product Name="SmLuggage" LongName="Luggage Tag 1 1/2 x 2 1/2 (inches)" Width="2.500" Height="1.500" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="5" AllowPicture="True" OrderListZoom="60">
+                    <Cutouts>
+                        <Cutout X=".23" Y=".8" Width=".125" Height=".5" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+                <Product Name="SmKey" LongName="Key Tag  3/4 x 1 1/2 (inches)" Width="1.5" Height="0.750" DefaultFont="Arial" DefaultFontSize="8.00" DefaultLines="2" MaxLines="2" AllowPicture="True" OrderListZoom="80">
+                    <Cutouts>
+                        <Cutout X=".23" Y=".15" Width="0.25" Height="0.50" Style="Keyhole" Engrave="True" />
+                    </Cutouts>
+                </Product>
+            </Products>
+
+            <Materials>
+                <Material MaterialId="1" />
+                <Material MaterialId="2" />
+                <Material MaterialId="3" />
+                <Material MaterialId="4" />
+                <Material MaterialId="5" />
+                <Material MaterialId="6" />
+                <Material MaterialId="7" />
+                <Material MaterialId="8" />
+                <Material MaterialId="9" />
+                <Material MaterialId="10" />
+                <Material MaterialId="11" />
+                <Material MaterialId="12" />
+                <Material MaterialId="13" />
+                <Material MaterialId="14" />
+                <Material MaterialId="15" />
+            </Materials>
+            <Zooms>
+                <Zoom>50</Zoom>
+                <Zoom>75</Zoom>
+                <Zoom IsDefault="True">100</Zoom>
+                <Zoom>200</Zoom>
+            </Zooms>
+        </ProductCategory>
+      <ProductCategory Name ="Polymer">
+        <Products>
+          <Product Name="9015P" Price="$24.99" LongName="9015 Rubber Stamp die 2 11/16 x 1 3/16 (inches)" Width="2.6875" Height="1.1875" DefaultFont="Arial" DefaultFontSize="11.00" DefaultLines="3" MaxLines="7" AllowPicture="True" OrderListZoom="80" />
+        </Products>
+        
+      </ProductCategory>
+    </ProductCategories>
+    <Materials>
+        <Material MaterialId="1" Description="Black text on a White Background" Foreground="Black" Background="White" BackgroundImage="white.jpg" />
+        <Material MaterialId="2" Description="Black text on a Brushed Silver Background" Foreground="Black" Background="Silver" BackgroundImage="silver.jpg" />
+        <Material MaterialId="3" Description="Black text on a Yellow Background" Foreground="Black" Background="Yellow" BackgroundImage="yellow.jpg" />
+        <Material MaterialId="4" Description="Black text on a Brushed Gold Background" Foreground="Black" Background="Gold" BackgroundImage="gold.jpg" />
+        <Material MaterialId="5" Description="Red text on a White Background" Foreground="Red" Background="White" BackgroundImage="white.jpg" />
+        <Material MaterialId="6" Description="Blue text on a White Background" Foreground="Blue" Background="White" BackgroundImage="white.jpg" />
+        <Material MaterialId="7" Description="White text on a Black Background" Foreground="White" Background="Black" BackgroundImage="black.jpg" />
+        <Material MaterialId="8" Description="White text on a Red Background" Foreground="White" Background="Red" BackgroundImage="red.jpg" />
+        <Material MaterialId="9" Description="White text on a Green Background" Foreground="White" Background="Green" BackgroundImage="green.jpg" />
+        <Material MaterialId="10" Description="White text on a Blue Background" Foreground="White" Background="Blue" BackgroundImage="blue.jpg" />
+        <Material MaterialId="11" Description="White text on a Navy Blue Background" Foreground="White" Background="Navy" BackgroundImage="navyblue.jpg" />
+        <Material MaterialId="12" Description="White text on a Grey Background" Foreground="White" Background="Gray" BackgroundImage="grey.jpg" />
+        <Material MaterialId="13" Description="White text on a Charcoal Marble Background" Foreground="White" Background="DarkSlateGray" BackgroundImage="charcoal.jpg" />
+        <Material MaterialId="14" Description="White text on a Verde Green Fleck Background" Foreground="White" Background="DarkSeaGreen" BackgroundImage="verdegreen.jpg" />
+        <Material MaterialId="15" Description="White text on a Rustico Background" Foreground="White" Background="DarkOrange" BackgroundImage="rustico.jpg" />
+    </Materials>   
+</Config>

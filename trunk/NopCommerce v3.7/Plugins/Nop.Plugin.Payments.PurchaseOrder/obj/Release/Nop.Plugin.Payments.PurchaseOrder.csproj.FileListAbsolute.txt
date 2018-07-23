@@ -1,0 +1,10 @@
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Views\PaymentPurchaseOrder\Configure.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Views\PaymentPurchaseOrder\PaymentInfo.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\web.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Description.txt
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\logo.jpg
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.dll.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.pdb
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Payments.PurchaseOrder\obj\Release\Nop.Plugin.Payments.PurchaseOrder.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Payments.PurchaseOrder\obj\Release\Nop.Plugin.Payments.PurchaseOrder.pdb

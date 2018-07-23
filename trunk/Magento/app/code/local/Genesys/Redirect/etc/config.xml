@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Genesys_Redirect>
+			<version>0.1.0</version>
+		</Genesys_Redirect>
+	</modules>
+	<frontend>
+		<routers>
+			<checkout>
+				<args>
+					<modules>
+						<Genesys_Redirect before="Mage_Checkout">Genesys_Redirect</Genesys_Redirect>
+					</modules>
+				</args>
+			</checkout>
+		</routers>
+		<layout>
+            <updates>
+                <Genesys_Redirect>
+                    <file>Genesys_Redirect/layout.xml</file>
+                </Genesys_Redirect>
+            </updates>
+        </layout>
+	</frontend>
+	<global>
+		<helpers>
+			<Genesys_Redirect>
+				<class>Genesys_Redirect_Helper</class>
+			</Genesys_Redirect>
+		</helpers> 
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <genesys_id />
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
+		<events>
+			<sales_order_place_after>
+				<observers>
+					<genesys_redirect_order_observer>
+						<type>singleton</type>
+						<class>Genesys_Redirect_Order_Observer</class>
+						<method>export_new_order</method>
+					</genesys_redirect_order_observer>
+				</observers>
+			</sales_order_place_after>
+		</events>
+	</global>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <Genesys_Redirect module="Genesys_Redirect">
+                                            <title>Genesys Module Section</title>
+                                        </Genesys_Redirect>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

@@ -1,0 +1,6 @@
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.PurchasedOneProduct\Description.txt
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.PurchasedOneProduct\Nop.Plugin.DiscountRules.PurchasedOneProduct.dll
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.PurchasedOneProduct\Nop.Plugin.DiscountRules.PurchasedOneProduct.pdb
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.PurchasedOneProduct\obj\Debug\Nop.Plugin.DiscountRules.PurchasedOneProduct.dll
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.PurchasedOneProduct\obj\Debug\Nop.Plugin.DiscountRules.PurchasedOneProduct.pdb
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.PurchasedOneProduct\obj\Debug\Nop.Plugin.DiscountRules.PurchasedOneProduct.csprojResolveAssemblyReference.cache

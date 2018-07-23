@@ -1,0 +1,70 @@
+﻿@model ContactUsModel
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+}
+<div class="page contact-page tac">
+    <div class="page-title" style="margin-left:-100px">
+        <h1>@T("PageTitle.ContactUs")</h1>
+    </div>
+    @Html.Action("TopicBlock", "Topic", new { systemName = "ContactUs" })
+    <div class="page-body">
+        @Html.Widget("contactus_top")
+        @if (Model.SuccessfullySent)
+        {
+            <div class="result">
+                @Model.Result
+            </div>
+            <div style="float:right; padding-top:20px;">
+                <input class="big-btn" type="button" onclick="location.href = '/Plugins/WidgetsGeneSysWidget/PersonalizeOnly'" value="Next »" style="display: inline-block;" />
+            </div>
+        }
+        else
+        {
+            using (Html.BeginForm())
+            {
+            <div class="message-error">
+                @Html.ValidationSummary(true)
+            </div>
+            <div class="form-fields">
+                
+				
+				
+				
+				<table border="0" cellpadding="0" cellspacing="0" id="contactform">
+					<tr>
+						<td class="lbl">@Html.LabelFor(model => model.FullName)</td>
+						<td>@Html.TextBoxFor(model => model.FullName, new { @class = "fullname", placeholder = T("ContactUs.FullName.Hint") })@Html.ValidationMessageFor(model => model.FullName)</td>
+					</tr>
+					<tr>
+						<td class="lbl">@Html.LabelFor(model => model.Email)</td>
+						<td>@Html.TextBoxFor(model => model.Email, new { @class = "email", placeholder = T("ContactUs.Email.Hint") })@Html.ValidationMessageFor(model => model.Email)</td>
+					</tr>
+					@if (Model.DisplayCaptcha)
+                    {
+                    <tr>
+						<td class="lbl"></td>
+						<td>@Html.Raw(Html.GenerateCaptcha())</td>
+					</tr>
+                    }
+					<tr>
+						<td valign="top" class="lbl">@Html.LabelFor(model => model.Enquiry)</td>
+						<td>@Html.TextAreaFor(model => model.Enquiry, new { @class = "enquiry", placeholder = T("ContactUs.Enquiry.Hint") })@Html.ValidationMessageFor(model => model.Enquiry)</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="submit" name="send-email" class="button-1 contact-us-button" value="@T("ContactUs.Button")" /></td>
+					</tr>
+				</table>
+
+            </div>
+
+            }
+        }
+        <div id="footer-box" style="width: 881px;margin-left:-200px">PEERLESS&trade; &ndash; The Number One Hand Stamp&trade;, the closing gift that doubles as a marketing tool!</div>
+        @Html.Widget("contactus_bottom")
+    </div>
+</div>

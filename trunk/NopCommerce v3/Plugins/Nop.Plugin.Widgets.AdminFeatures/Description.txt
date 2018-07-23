@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: Admin Features
+SystemName: Widgets.AdminFeatures
+Version: 1.00
+SupportedVersions: 3.00
+Author: Michael McNeely
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.AdminFeatures.dll

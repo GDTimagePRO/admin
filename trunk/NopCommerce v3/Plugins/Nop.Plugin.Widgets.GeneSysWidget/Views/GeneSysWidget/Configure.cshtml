@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Widgets.GeneSysWidget.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.GeneSysUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.GeneSysUrl)
+                @Html.ValidationMessageFor(model => model.GeneSysUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.SiteName):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.SiteName)
+                @Html.ValidationMessageFor(model => model.SiteName)
+            </td>
+        </tr>
+        <!--<tr>
+            <td class="adminTitle">
+                Html.NopLabelFor(model => model.ReturnToValues):
+            </td>
+            <td class="adminData">
+                Html.DropDownList("ReturnToID", Model.ReturnToValues)
+            </td>
+        </tr>-->
+        <tr>
+            <td colspan="2" width="100%">
+                <input type="submit" name="save" class="t-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+    
+}

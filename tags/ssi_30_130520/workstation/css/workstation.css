@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+#showGridTable{
+	width: 95%;
+	border: 1px solid black;
+}
+
+#showGridTable th,td{
+	border: 1px solid black;
+}

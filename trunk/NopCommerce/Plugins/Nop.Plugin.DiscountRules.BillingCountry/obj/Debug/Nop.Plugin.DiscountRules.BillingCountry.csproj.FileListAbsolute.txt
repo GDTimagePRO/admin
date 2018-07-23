@@ -1,0 +1,6 @@
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.BillingCountry\Description.txt
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.BillingCountry\Nop.Plugin.DiscountRules.BillingCountry.dll
+C:\work\nopCommerce_2.80_Source\Presentation\Nop.Web\Plugins\DiscountRules.BillingCountry\Nop.Plugin.DiscountRules.BillingCountry.pdb
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.BillingCountry\obj\Debug\Nop.Plugin.DiscountRules.BillingCountry.csprojResolveAssemblyReference.cache
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.BillingCountry\obj\Debug\Nop.Plugin.DiscountRules.BillingCountry.dll
+C:\work\nopCommerce_2.80_Source\Plugins\Nop.Plugin.DiscountRules.BillingCountry\obj\Debug\Nop.Plugin.DiscountRules.BillingCountry.pdb

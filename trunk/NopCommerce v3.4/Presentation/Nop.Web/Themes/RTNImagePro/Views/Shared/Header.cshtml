@@ -1,0 +1,60 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Localization
+@using Nop.Web.Framework.Themes
+@{
+    //logo path
+    var currentThemeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    var logoPath = "~/Themes/" + currentThemeName + "/Content/images/logo.gif";
+
+    //store name
+    var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+}
+
+<div class="header">
+    @Html.Widget("header")
+    <div class="header-logo">
+        <a href="@Url.RouteUrl("HomePage")">
+            <img title="" alt="@storeName" src="@Url.Content(logoPath)">
+        </a>
+    </div>
+    <div class="header-links-wrapper">
+        @Html.Action("HeaderLinks", "Common")
+        @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+    </div>
+    <div class="search-box">
+        @Html.Action("SearchBox", "Catalog")
+    </div>
+    <div class="header-selectors-wrapper">
+        <div class="tax-display-type-selector">
+            @Html.Action("TaxTypeSelector", "Common")
+        </div>
+        <div class="currency-selector">
+            @Html.Action("CurrencySelector", "Common")
+        </div>
+        <div class="language-selector">
+            @Html.Action("LanguageSelector", "Common")
+        </div>
+        <div class="currency-selector" style="position:relative;visibility:hidden">
+            @if (Request.Url.Host != "www.rtnimagepro.com" && Request.Url.Host != "rtnimagepro.com")
+            {
+                <div class="flag-container">
+                    <a href="http://rtnimagepro.com"><img id="flag-canada" src="Themes/RTNImagePro/Content/images/flags.png" class="flag flag-ca" alt="Canada" style="opacity:0.4;filter:alpha(opacity=40)" /></a>
+                </div>
+                <div class="flag-container">
+                    <a href="#"><img id="flag-us" src="Themes/RTNImagePro/Content/images/flags.png" class="flag flag-us" alt="United States" /></a>
+                </div>
+            }
+            else
+            {
+                <div class="flag-container">
+                    <a href="http://us.rtnimagepro.com"><img id="flag-us" src="Themes/RTNImagePro/Content/images/flags.png" class="flag flag-us" alt="United States" style="opacity:0.4;filter:alpha(opacity=40)" /></a>
+                </div>
+                <div class="flag-container">
+                    <a href="#"><img id="flag-canada" src="Themes/RTNImagePro/Content/images/flags.png" class="flag flag-ca" alt="Canada" /></a>
+                </div>
+            }
+        </div>
+        @Html.Widget("header_selectors")
+    </div>
+</div>

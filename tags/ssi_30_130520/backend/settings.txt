@@ -1,0 +1,20 @@
+{
+"server": "localhost",
+"username": "root",
+"password": "",
+"database name": "ssi",
+"images": "C:/_v3_images",
+
+"render service 2": "http://localhost:8080/ARTServer/RenderScene",
+"url 2": "localhost/ssi_30/",
+
+"render service": "http://192.168.2.23:8080/ARTServer/RenderScene",
+"url": "192.168.2.23/ssi_30/",
+
+"default order processing stage": 200,
+"default order item processing stage": 0,
+"fonts": ["Arial","Times New Roman","Helvetica","Wingdings","FrutigerLtStd-Light"],
+"min font size": "6",
+"max font size": "72",
+"font size step": "1"
+}

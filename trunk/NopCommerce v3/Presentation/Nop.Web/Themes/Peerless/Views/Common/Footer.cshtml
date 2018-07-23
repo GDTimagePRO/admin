@@ -1,0 +1,31 @@
+﻿@model FooterModel
+@using Nop.Web.Models.Common;
+
+@{
+    var footer_links_style = "";
+    if (this.Request.FilePath != "/"){
+        footer_links_style = "display: none;";
+    }
+}
+    
+  <!--<div id="footer-box">Give us a try for you next closing gift. We guarantee you and your client will be very pleased.</div>-->
+  <div class="clear"></div>
+  <div id="copy">&copy; 
+  <script language="JavaScript">
+    <!--
+    today=new Date();
+    year0=today.getFullYear();
+    document.write(year0);
+    //-->
+    </script> Peerless</div>
+        <div id="footerlinks" style="@footer_links_style">
+			<ul id="footerlinks-ul">
+				<li><a href="/t/PrivacyInfo">Privacy Policy</a></li>
+				<li><a href="/t/ReturnPolicy">Refund/Return Policy</a></li>
+				<li><a href="/t/ShippingInfo">Shipping Policy</a></li>
+			</ul>
+		</div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>

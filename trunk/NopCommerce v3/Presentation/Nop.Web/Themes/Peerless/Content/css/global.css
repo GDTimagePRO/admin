@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'TrajanProBold';
+    src: url('../fonts/trajan/trajanpro-bold-webfont.eot');
+    src: url('../fonts/trajan/trajanpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/trajan/trajanpro-bold-webfont.woff') format('woff'),
+         url('../fonts/trajan/trajanpro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/trajan/trajanpro-bold-webfont.svg#TrajanProBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fertigo';
+    src: url('../fonts/fertigo/fertigo.eot');
+    src: url('../fonts/fertigo/fertigo.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fertigo/fertigo.woff') format('woff'),
+         url('../fonts/fertigo/fertigo.ttf') format('truetype'),
+         url('../fonts/fertigo/fertigo.svg#fertigo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'frutiger-light';
+	src: url('../fonts/frutiger-light.eot');
+	src: local('☺'), url('../fonts/frutiger-light.woff') format('woff'), 
+	url('../fonts/frutiger-light.ttf') format('truetype'), 
+	url('../fonts/frutiger-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'frutiger-bold';
+	src: url('../fonts/frutiger-bold.eot');
+	src: local('☺'), url('../fonts/frutiger-bold.woff') format('woff'), 
+	url('../fonts/frutiger-bold.ttf') format('truetype'), 
+	url('../fonts/frutiger-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/**/
+* 	{margin:0;padding:0; outline:none;}
+html{overflow:-moz-scrollbars-vertical;overflow-y:scroll;}
+body{
+	font:16px/24px Georgia, "Times New Roman", Times, serif;
+	color:#525252;
+	margin:10px auto 20px;
+}
+/**** ANCHOR ****/
+a, a:visited, a:active{outline:none; color:#2697db; text-decoration:none;}
+a:hover{color:#ff6600; text-decoration: none;}
+a img{border:none;}
+p	{margin:16px 0 0 0;}
+
+h1{
+	font:normal 30px/40px 'fertigo';
+	color:#00539f;
+	margin:0;
+	padding-bottom:15px;
+	text-align:center;
+}
+h3{
+	font:normal 20px/1 'fertigo';
+	color:#00539f;
+	padding-bottom:5px;
+}
+
+h4{
+	font:normal 16px/1.5 'fertigo';
+	color:#00539f;
+	margin:0;
+	padding-bottom:8px;
+}
+h4.cs2{
+	padding-top:23px;
+}
+/**/
+input[type="text"], input[type="password"], textarea{
+	width:auto;
+	height:25px;
+	padding:5px 8px;
+	border:1px solid #7799be;
+	color:#999;
+	font:18px "Times New Roman", Times, serif;
+}
+textarea{
+	height:120px;
+}
+td{ text-align:left;}
+/**** MISC ****/
+.clear{
+	clear:both;
+	height:1px;
+	overflow:hidden;
+}
+
+/**/
+.cblk{color:#000 !important}
+.f13{font-size:13px !important;}
+.pull-left{float:left !important;}
+.pull-right{float:right !important;}
+.pl3{padding-left:15px !important;}
+.pl16{padding-left:80px !important;}
+.m0{margin:0 !important;}
+.mt1{margin-top:5px !important;}
+.mt2{margin-top:10px !important;}
+.mr4{margin-right:20px !important;}
+.mt3{margin-top:15px !important;}
+.mt5{margin-top:25px !important;}
+.mt8{margin-top:40px !important;}
+
+.mb4{margin-bottom:20px !important;}
+.pl4{padding-left:20px !important;}
+.pl7{padding-left:35px !important;}
+.pt2{padding-top:10px !important;}
+.pt4{padding-top:20px !important;}
+.pt7{padding-top:35px !important;}
+.pr1{padding-right:5px !important;}
+.pr4{padding-right:20px !important;}
+.w45{width:45% !important;}
+.w50{width:50% !important;}
+.w2{width:22% !important;}
+.w3{width:30% !important;}
+.w4{width:40% !important;}
+.txt{width:250px !important;}
+.tac{text-align:center !important;}
+.tar{text-align: right !important;}
+
+/**/
+input[type="button"], input[type="submit"], button {
+	cursor: pointer;
+	border:none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #FFF;
+	font:bold 15px/14px Arial;
+	padding: 12px 16px;
+	height: 38px;
+	background:#0077cb url(../images/btn.png) 0 0 repeat-x;
+	text-shadow:1px 1px 0 #0765a7;
+}
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+	background:#0194e3 url(../images/btn-on.png) 0 bottom no-repeat;
+	text-decoration: none;
+	color: #FFF;
+}

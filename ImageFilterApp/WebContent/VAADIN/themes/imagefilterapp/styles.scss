@@ -1,0 +1,13 @@
+@import "addons.scss";
+@import "imagefilterapp.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in imagefilterapp.scss */
+.imagefilterapp {
+  @include addons;
+  @include imagefilterapp;
+}
+
+.v-slider-handle
+{
+}

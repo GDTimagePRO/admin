@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Workstation</display-name>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>genesys_core</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <context-param>
+    <description>Genesys location</description>
+    <param-name>GenesysURL</param-name>
+    <param-value>http://genesys.in-stamp.com:8080/ARTServer/</param-value>
+  </context-param>
+  <context-param>
+    <description>API location</description>
+    <param-name>APIURL</param-name>
+    <param-value>http://www.genesys.in-stamp.com/</param-value>
+  </context-param>
+  <context-param>
+    <description>Properties location</description>
+    <param-name>PropertiesFile</param-name>
+    <param-value>C:\HostingSpaces\loucks51\workstation_properties.txt</param-value>
+  </context-param>
+</web-app>

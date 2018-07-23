@@ -1,0 +1,40 @@
+ Volume in drive C is New Volume
+ Volume Serial Number is 3A9F-8C3B
+
+ Directory of C:\Users\ahnh\Desktop\New folder (3)
+
+19/04/2013  11:26 PM    <DIR>          .
+19/04/2013  11:26 PM    <DIR>          ..
+09/04/2013  10:52 AM            37,132 Alternate_Gothic_No2_BT.ttf
+09/11/2012  02:13 PM            51,304 Arvil_Sans.ttf
+06/10/2000  12:38 AM            27,888 BALLPARK_WEINER.TTF
+09/01/2009  03:43 PM            47,948 CAC_Champagne.ttf
+09/11/2012  02:13 PM            12,192 Carton_Slab.otf
+09/04/2013  10:59 AM            17,200 DinerFatt.ttf
+09/04/2013  11:01 AM            58,100 EdwardianScriptITC.ttf
+07/01/2011  09:07 PM            96,588 Fanwood-Italic.otf
+07/01/2011  09:07 PM           128,448 Fanwood.otf
+19/04/2013  11:26 PM                 0 file.txt
+27/03/2000  08:11 AM            47,264 Garamond-Bold.ttf
+27/03/2000  08:12 AM            45,724 Garamond-BoldItalic.ttf
+27/03/2000  08:08 AM            46,560 Garamond-Italic.ttf
+27/03/2000  08:22 AM            47,824 Garamond-Light.ttf
+27/03/2000  08:21 AM            46,068 Garamond-LightItalic.ttf
+27/03/2000  08:07 AM            47,476 Garamond.ttf
+10/02/2009  03:33 PM            39,656 gothic_ultra_ot.otf
+09/04/2013  06:10 PM           119,172 House-A-Rama-League-Night.ttf
+09/04/2013  11:10 AM            50,604 ITC Cheltenham Std bold italic.TTF
+09/11/2012  02:14 PM           167,200 MFC_Manoir_Mngm250.ttf
+09/11/2012  02:14 PM            61,836 MFC_Manoir_Mngm_Basic250.ttf
+09/11/2012  02:14 PM            67,444 MFC_Manoir_Mngm_Flourish250.ttf
+04/01/2004  02:20 PM           136,296 POSTOFFICE.ttf
+09/01/2009  03:42 PM            37,812 Quicksand_Bold.otf
+09/01/2009  03:42 PM            38,172 Quicksand_Bold_Oblique.otf
+09/01/2009  03:42 PM            36,656 Quicksand_Book.otf
+09/01/2009  03:42 PM            38,752 Quicksand_Book_Oblique.otf
+09/01/2009  03:42 PM            60,244 Quicksand_Dash.otf
+09/01/2009  03:42 PM            35,504 Quicksand_Light.otf
+09/01/2009  03:42 PM            36,548 Quicksand_Light_Oblique.otf
+22/02/2013  01:59 AM            55,324 trade-gothic-lt-condensed-no-18-oblique.ttf
+              31 File(s)      1,738,936 bytes
+               2 Dir(s)  39,454,400,512 bytes free

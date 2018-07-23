@@ -1,0 +1,21 @@
+.element-div
+{
+    border-style: solid;
+    border-width:1px;
+    border-radius: 10px;
+    min-height: 70px;
+    padding-left:5px;
+    padding-top:5px;
+    margin-bottom: 4px;
+}
+
+.selected-div
+{
+    background-color: rgba(255, 51, 51, 0.5);
+}
+
+.modify-element-box-wrapper
+{
+    height:390px;
+    overflow-y:scroll;
+}

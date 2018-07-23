@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel
+@using Nop.Web.Framework;
+@using Telerik.Web.Mvc.UI
+@{
+    var routingData = HttpContext.Current.Request.RequestContext.RouteData.Values;
+    foreach (Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel.Button b in Model.getAllButtons())
+    {
+         if (b != null)
+        {
+            if (routingData["controller"].ToString() == b.Controller && routingData["action"].ToString() == b.Action)
+            {
+                if (b.Select)
+                {
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            //"Export picking selected" button
+                            $('#@b.Route').click(function (e) {
+                                e.preventDefault();
+                                //redirect to required URL
+                                setLocation('@(Url.Action(b.Route, "WidgetsAdminFeatures"))?selectedIds=' + selectedIds.join(","));
+                                return false;
+                            });
+                        });
+                    </script> 
+                }
+                else if (b.Import)
+                {
+                    Html.Telerik().Window()
+                    .Name(b.Route + "-window")
+                    .Title("Import")
+                    .Content(@<text>
+                            @using (Html.BeginForm("ImportShippingInfo", "WidgetsAdminFeatures", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                            <table style="text-align: left;">
+                                <tr>
+                                    <td>
+                                        Import File:
+                                    </td>
+                                    <td>
+                                        <input type="file" id="@b.Route-file" name="@b.Route-file" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                         <input type="submit" class="t-button" value="Import" />
+                                    </td>
+                                </tr>
+                            </table>
+                            }
+                        </text>)
+                    .Width(400)
+                    .Draggable(true)
+                    .Modal(true)
+                    .Visible(false)
+                    .Render();
+                    
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $("#@b.Route").click(function (e) {
+                            e.preventDefault();
+                            $('#@b.Route-window').data('tWindow').center().open();
+                            });
+                        });
+                    </script>   
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Description.txt
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Views\GeneSysWidget\Configure.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\web.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Views\AdminFeatures\Buttons.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Views\AdminFeatures\Configure.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Views\AdminFeatures\Javascript.cshtml
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\logo.jpg
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Content\images\logo.gif
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Nop.Plugin.Widgets.AdminFeatures.dll.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Nop.Plugin.Widgets.AdminFeatures.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Presentation\Nop.Web\Plugins\Widgets.AdminFeatures\Nop.Plugin.Widgets.AdminFeatures.pdb
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.AdminFeatures\obj\Release\Nop.Plugin.Widgets.AdminFeatures.csproj.App.config
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.AdminFeatures\obj\Release\Nop.Plugin.Widgets.AdminFeatures.csprojResolveAssemblyReference.cache
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.AdminFeatures\obj\Release\Nop.Plugin.Widgets.AdminFeatures.dll
+C:\Consulting\source\trunk\NopCommerce v3.7\Plugins\Nop.Plugin.Widgets.AdminFeatures\obj\Release\Nop.Plugin.Widgets.AdminFeatures.pdb

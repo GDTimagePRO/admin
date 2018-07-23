@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" href="css/themes/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/lib/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-ui-1.8.23.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function() {		
+				var timer, preFocus;
+
+				$( "#slider-vertical" ).slider({
+					orientation: "vertical",
+					range: "min",
+					min: 0,
+					max: 100,
+					value: 60,
+					slide: function( event, ui ) {
+						preFocus.val( ui.value );
+					}
+				});
+				$( "input" ).val( $( "#slider-vertical" ).slider( "value" ) );
+				$( "input" ).bind('input', function() {
+					var data = preFocus.val();
+					
+					if (data.length > 0) 
+					{
+						if (parseInt(data) >= 0 && parseInt(data) <= 100) 
+						{
+							$("#slider-vertical").slider("option", "value", data);
+						}
+						else
+						{
+							if (parseInt(data) < 0) 
+							{
+								$("#txtVal").val("0");
+								$("#slider-vertical").slider("option", "value", 0);
+							}
+							if (parseInt(data) > 100) 
+							{
+  								$("#txtVal").val("100");
+  								$("#slider-vertical").slider("option", "value", 100);
+        					}
+     					}
+  					}	
+  					else
+					{ 
+    					$("#slider-vertical").slider("option", "value", 0); 
+  					}  
+				});
+
+				$("input").focus(function() {
+					preFocus = $(this);
+					$("#slider-vertical").slider("option", "value", preFocus.val());
+					var pos = $(this).position();
+					pos.left = pos.left + $(this).width() + 10; 
+					
+					var silder = $("#slider-vertical");
+					silder.show();
+					silder.css( "top", pos.top + "px");
+					silder.css( "left", pos.left + "px");
+					clearTimeout(timer);
+				});
+				
+				$("input").blur(function() 
+				{
+					timer = setTimeout(function(){$("#slider-vertical").hide();},100);	
+				});
+			
+				$("#slider-vertical").mousedown(function() {
+					if (typeof preFocus  !== "undefined") {
+						preFocus.focus();
+						clearTimeout(timer);
+					}
+				});
+				$("#slider-vertical").hide();
+			});
+		</script>
+	</head>
+	<body>
+		<br /><br /><br />
+		<input type="text" id="txtVal" style="color:#f6931f; font-weight:bold;" />
+		<br /><br /><br />
+		<input type="text" id="txtVal2" style="color:#f6931f; font-weight:bold;" />
+		<div id="slider-vertical" style="position:absolute;height:200px;"> </div>
+		<br /><br /><br />
+		
+	</body>
+</html>

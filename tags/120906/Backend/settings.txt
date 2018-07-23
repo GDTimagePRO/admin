@@ -1,0 +1,13 @@
+{
+"server": "rhonda.ipagemysql.com",
+"username": "cmcguinn",
+"password": "l11fd4eq",
+"database name": "ssi",
+"url": "cameronmcguinness.com/ssi/",
+"default order processing stage": "waitsub",
+"default order item processing stage": "dnf",
+"fonts": ["Arial","Times New Roman","Helvetica","Wingdings","FrutigerLtStd-Light"],
+"min font size": "6",
+"max font size": "72",
+"font size step": "1"
+}

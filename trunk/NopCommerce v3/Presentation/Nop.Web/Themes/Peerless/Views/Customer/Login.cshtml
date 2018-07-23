@@ -1,0 +1,108 @@
+﻿@model LoginModel
+@using Nop.Web.Models.Customer;
+@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Login").Text);
+
+    //register URL with return URL (if specified)
+    var registerUrl = Url.RouteUrl("Register");
+    if (!String.IsNullOrEmpty(this.Context.Request.QueryString["returnUrl"]))
+    {
+        var webHelper = EngineContext.Current.Resolve<IWebHelper>();
+        registerUrl = webHelper.ModifyQueryString(registerUrl, "returnurl=" + HttpUtility.UrlEncode(this.Context.Request.QueryString["returnUrl"]), null);
+    }
+}
+<div class="page login-page">
+    <div class="page-title">
+        <h1>@T("Account.Login.Welcome")</h1>
+    </div>
+    @Html.Partial("_ExternalAuthentication.AssociateMessage")
+    @Html.Partial("_ExternalAuthentication.Errors")
+    <div class="page-body">
+        <div class="customer-blocks">
+            
+			
+@using (Html.BeginForm())
+{
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table">
+      <tr>
+        <th width="50%">@T("Account.Login.ReturningCustomer")</th>
+        <th width="50%" class="bdrl">@T("Account.Login.NewCustomer")</th>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2">
+                            @Html.ValidationSummary(true, T("Account.Login.Unsuccessful").Text)
+				</td>
+			</tr>
+			<tr>
+			  @if (Model.UsernamesEnabled)
+			  {
+			  <td class="lbl">@Html.LabelFor(m => m.Username, new { }, ":") </td>
+              <td>@Html.TextBoxFor(m => m.Username, new { @class = "username", autofocus = "autofocus" })@Html.ValidationMessageFor(m => m.Username)</td>
+			  }
+			  else
+			  {
+			  <td class="lbl">@Html.LabelFor(m => m.Email, new { }, ":")</td>
+              <td>@Html.TextBoxFor(m => m.Email, new { @class = "email", autofocus = "autofocus" })@Html.ValidationMessageFor(m => m.Email)</td>
+			  }
+            </tr>
+            <tr>
+              <td class="lbl">@Html.LabelFor(m => m.Password, new { }, ":")</td>
+              <td>@Html.PasswordFor(m => m.Password, new { @class = "password" })@Html.ValidationMessageFor(m => m.Password)</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>@Html.CheckBoxFor(m => m.RememberMe)
+			  @Html.LabelFor(m => m.RememberMe)&nbsp;&nbsp;&nbsp;&nbsp;@Html.RouteLink(T("Account.Login.ForgotPassword").Text, "PasswordRecovery")
+			  </td>
+            </tr>
+			@if (Model.DisplayCaptcha)
+			{
+			<tr>
+              <td class="lbl"></td>
+              <td>@Html.Raw(Html.GenerateCaptcha())</td>
+            </tr>
+			}
+            <tr>
+              <td>&nbsp;</td>
+              <td><input class="button-1 login-button medium-btn" id="login" type="submit" value="@T("Account.Login.LoginButton")" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+        <td class="bdrl rht">
+        <h3>Save time now</h3>
+        @if (Model.CheckoutAsGuest)
+		{
+		<p class="mt1">@Html.Action("TopicBlock", "Topic", new { systemName = "CheckoutAsGuestOrRegister" })</p>
+        <p><input type="button" class="button-1 checkout-as-guest-button medium-btn" onclick="location.href='@Url.RouteUrl("Checkout")'" value="@T("Account.Login.CheckoutAsGuest")" /></p>
+        <h3 class="mt5">Save time later</h3>
+		}
+        <p class="mt1">@T("Account.Login.NewCustomer")</p>
+        <p><input type="button" class="button-1 register-button medium-btn" id="register" onclick="location.href='@registerUrl'" value="@T("Account.Register")" /></p>
+        </td>
+      </tr>
+    </table>
+}
+
+
+        </div>
+        <div class="external-authentication">
+            @Html.Action("ExternalMethods", "ExternalAuthentication")
+        </div>
+    </div>
+</div>

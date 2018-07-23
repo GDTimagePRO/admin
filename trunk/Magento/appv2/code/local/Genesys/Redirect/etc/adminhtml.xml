@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <Genesys_Redirect module="Genesys_Redirect">
+                                            <title>Genesys Module Section</title>
+                                        </Genesys_Redirect>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

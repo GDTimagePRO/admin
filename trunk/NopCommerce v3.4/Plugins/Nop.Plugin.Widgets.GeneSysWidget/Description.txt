@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: GeneSys Widget
+SystemName: Widgets.GeneSysWidget
+Version: 2.00
+SupportedVersions: 3.40
+Author: InStamp
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.GeneSysWidget.dll

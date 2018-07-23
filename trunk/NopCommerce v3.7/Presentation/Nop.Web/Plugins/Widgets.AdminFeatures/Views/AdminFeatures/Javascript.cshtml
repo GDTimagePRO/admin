@@ -1,0 +1,67 @@
+﻿@model ButtonsModel
+@using Nop.Plugin.Widgets.AdminFeatures.Models
+@{
+    foreach (Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel.Button b in Model.buttons)
+    {
+        if (b != null)
+        {
+            if (b.Select)
+            {
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //"Export picking selected" button
+                        $('#@b.Route').click(function (e) {
+                            e.preventDefault();
+                            //redirect to required URL
+                            setLocation('@(Url.Action(b.Route, "WidgetsAdminFeatures"))?selectedIds=' + selectedIds.join(","));
+                            return false;
+                        });
+                    });
+                </script> 
+            }
+            else if (b.Import)
+            {
+
+                <div id="@b.Route-window" style="display:none;">
+                    @using (Html.BeginForm("ImportShippingInfo", "WidgetsAdminFeatures", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <table style="text-align:left;">
+                            <tr>
+                                <td>
+                                    File:
+                                </td>
+                                <td>
+                                    <input type="file" id="ImportShippingInfo-file" name="ImportShippingInfo-file" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" class="k-button" value="Import" />
+                                </td>
+                            </tr>
+                        </table>
+                    }
+                </div>
+
+                <script type="text/javascript">
+
+                    $(document).ready(function () {
+                        $("#@b.Route").click(function (e) {
+                            e.preventDefault();
+                            var window = $("#@b.Route-window");
+                            if (!window.data("kendoWindow")) {
+                                window.kendoWindow({
+                                    modal: true,
+                                    width: "400px",
+                                    title: "Import",
+                                    actions: ["Close"]
+                                });
+                            }
+                            window.data('kendoWindow').center().open();
+                        });
+                    });
+                </script>
+            }
+        }
+    }
+}

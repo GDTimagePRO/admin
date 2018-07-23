@@ -1,0 +1,55 @@
+{
+	"undo":"Undo",
+	"redo":"Redo",
+	"delete":"Delete",
+	"copy":"Copy",
+	"front":"Move Front",
+	"back":"Move Back",
+	"rleft":"Rotate Left",
+	"rright":"Rotate Right",
+	"mvert":"Mirror Vertically",
+	"mhoriz":"Mirror Horizontally",
+	"grid":"Toggle Grid",
+	"elementSelect":"Select Element",
+	"addImage":"Add Image",
+	"addText":"Add Text",
+	"addBorder":"Add Border",
+	"backgroundColor":"Set Background Color",
+	
+	"textColor":"Set Text Color",
+	"fontSize":"Set Font Size",
+	"bold":"Bold",
+	"italic":"Italic",
+	
+	"borderColor":"Set Border Color",
+	"borderSize":"Set Border Width",
+	"borderRadius":"Set Border Corner Radius",
+	"imageBrowse":"Browse Image",
+	"imageAspect":"Toggle Aspect Ratio Lock",
+	"textFont":"Set Font",
+	"borderStyle":"Set Border Style",
+	"imageSepia":"Sepia Filter",
+	"imageMonochrome":"Black & White Filter",
+    "imageSize":"Image Zoom",
+	
+	"__unused":{
+		
+	},
+	
+	"style":{
+		"color":"#362B36",
+		"backgroundColor":"#EFF6FE",
+		"padding":10,
+		"tip":true,
+		"textAlign":"center",
+		"title":{
+			"color":"#D0E9F5",
+			"backgroundColor":"#5E99BD"
+		},
+		"border":{
+			"width": 8,
+			"radius": 8,
+			"color": "#ADD9ED"
+		}
+	}
+}

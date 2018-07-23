@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel
+@using Nop.Web.Framework;
+@using Telerik.Web.Mvc.UI
+@{
+    var routingData = HttpContext.Current.Request.RequestContext.RouteData.Values;
+    foreach (Nop.Plugin.Widgets.AdminFeatures.Models.ButtonsModel.Button b in Model.getAllButtons())
+    {
+        if (b != null)
+        {
+            if (routingData["controller"].ToString() == b.Controller && routingData["action"].ToString() == b.Action)
+            {
+                if (b.Select)
+                {
+                    <input type="button" id="@b.Route" class="t-button" value="@b.Text" />
+                }
+                else if (b.Import)
+                {
+                    <input type="button" id="@b.Route" name="@b.Route" class="t-button" value="@b.Text" />
+                }
+                else
+                {
+                    <a href="@Url.Action(b.Route, "WidgetsAdminFeatures")" class="t-button">@b.Text</a>
+                }
+            }
+        }
+    }
+}

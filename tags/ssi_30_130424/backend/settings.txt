@@ -1,0 +1,14 @@
+{
+"server": "localhost",
+"username": "root",
+"password": "",
+"database name": "ssi",
+"images": "C:/_v3_images",
+"url": "localhost/ssi_30/",
+"default order processing stage": 200,
+"default order item processing stage": 0,
+"fonts": ["Arial","Times New Roman","Helvetica","Wingdings","FrutigerLtStd-Light"],
+"min font size": "6",
+"max font size": "72",
+"font size step": "1"
+}

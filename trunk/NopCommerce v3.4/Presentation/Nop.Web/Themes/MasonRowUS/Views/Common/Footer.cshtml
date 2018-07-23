@@ -1,0 +1,60 @@
+﻿@model FooterModel
+@using Nop.Core
+@using Nop.Core.Domain.Tax
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Common;
+
+<div class="footer">
+    <div style="margin-top:35px;margin-bottom:30px;">
+        <a href="https://www.facebook.com/MasonRowLLC"><img src="/Themes/MasonRowUs/Content/images/facebook-icon.png" style="width:30px;height:30px; padding-right:10px;" /></a>
+        <a href="https://twitter.com/Mason_Row"><img src="/Themes/MasonRowUs/Content/images/twitter-icon.png" style="width:30px;height:30px;padding-right:10px;" /></a>
+        <a href="http://pinterest.com/masonrow"><img src="/Themes/MasonRowUs/Content/images/pinterest-icon.png" style="width:30px;height:30px;padding-right:10px;" /></a>
+        <a href="http://instagram.com/masonrow"><img src="/Themes/MasonRowUs/Content/images/Instagram-icon.png" style="width:30px;height:30px;" /></a>
+    </div>
+    <div class="footer-menu-wrapper">
+        <div class="column information">
+            <h3>Customer Care</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("CustomerInfo")" class="account">Your Account</a></li>
+                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("shippinginfo") })">Shipping Information</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Returns & Exchanges") })">Returns & Exchanges</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("REDEEM VOUCHERS") })">Certificate Redemption</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Gift Cards") })">Gift Cards</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("FAQ page") })">FAQS</a></li>
+            </ul>
+        </div>
+        <div class="column customer-service">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("AboutUs") })">The Company</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("In the News") })">In the News</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Affiliate Program") })">Affiliate Program</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Privacy Policy") })">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="column follow-us" style="float:right; width:40%">
+            <h3>Don't Miss Out</h3>
+            @Html.Action("NewsletterBox", "Newsletter")
+        </div>
+    </div>
+    <div class="footer-poweredby">
+        Powered by <a href="http://www.nopcommerce.com/">nopCommerce</a>
+        @*Would you like to remove the "Powered by nopCommerce" link in the bottom of the footer?
+            Find more info here http://www.nopcommerce.com/copyrightremoval.aspx*@
+    </div>
+    @if (Model.DisplayTaxShippingInfoFooter)
+    {
+        var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+        <div class="footer-tax-shipping">
+            @T(inclTax ? "Footer.TaxShipping.InclTax" : "Footer.TaxShipping.ExclTax", Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("shippinginfo")}))
+        </div>
+    }
+    <div class="footer-disclaimer">
+        @T("Content.CopyrightNotice", DateTime.Now.Year, Model.StoreName)
+    </div>
+    <div class="footer-store-theme">
+        @Html.Action("StoreThemeSelector", "Common")
+    </div>
+    @Html.Widget("footer")
+</div>

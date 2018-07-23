@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Widgets.GeneSysWidget.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@using Nop.Plugin.Widgets.GeneSysWidget
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.GenesysDesignUrl_OverrideForStore, model => model.GenesysDesignUrl, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.GenesysDesignUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.GenesysDesignUrl)
+                @Html.ValidationMessageFor(model => model.GenesysDesignUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.GenesysProcessUrl_OverrideForStore, model => model.GenesysProcessUrl, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.GenesysProcessUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.GenesysProcessUrl)
+                @Html.ValidationMessageFor(model => model.GenesysProcessUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.SiteName_OverrideForStore, model => model.SiteName, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.SiteName):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.SiteName)
+                @Html.ValidationMessageFor(model => model.SiteName)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.ReturnToValues_OverrideForStore, model => model.ReturnToID, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.ReturnToValues):
+            </td>
+            <td class="adminData">
+                @Html.DropDownList("ReturnToID", Model.ReturnToValues)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.ExternalSystemName_OverrideForStore, model => model.ExternalSystemName, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.ExternalSystemName):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ExternalSystemName)
+                @Html.ValidationMessageFor(model => model.ExternalSystemName)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.OverrideStoreCheckboxFor(model => model.DistributionValues_OverrideForStore, model => model.DistributionId, Model.ActiveStoreScopeConfiguration)
+                @Html.NopLabelFor(model => model.DistributionValues):
+            </td>
+            <td class="adminData">
+                @Html.DropDownList("DistributionId", Model.DistributionValues)
+            </td>
+        </tr>
+        @if (Model.DistributionId == Convert.ToInt32(Distribution.Email) || Model.ActiveStoreScopeConfiguration == 0)
+        {
+            <tr>
+                <td class="adminTitle">
+                    @Html.OverrideStoreCheckboxFor(model => model.Email_OverrideForStore, model => model.Email, Model.ActiveStoreScopeConfiguration)
+                    @Html.NopLabelFor(model => model.Email):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.OverrideStoreCheckboxFor(model => model.ImageTypeValues_OverrideForStore, model => model.ImageTypeId, Model.ActiveStoreScopeConfiguration)
+                    @Html.NopLabelFor(model => model.ImageTypeValues):
+                </td>
+                <td class="adminData">
+                    @Html.DropDownList("ImageTypeId", Model.ImageTypeValues)
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="2" width="100%">
+                <input type="submit" name="save" class="t-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+    
+}

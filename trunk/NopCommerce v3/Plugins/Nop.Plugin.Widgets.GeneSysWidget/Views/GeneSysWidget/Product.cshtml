@@ -1,0 +1,41 @@
+﻿@model Nop.Web.Models.Catalog.ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Domain.Orders;
+@{
+        Layout = "";
+}
+    
+@{
+    var defaultProductVariant = Model.ProductVariantModels.Count > 0 ? Model.ProductVariantModels[0] : null;
+    var AddToCart = defaultProductVariant.AddToCart;
+    Nop.Web.Models.Catalog.ProductDetailsModel.ProductVariantModel.ProductVariantAttributeModel defaultAttribute;
+    string controlId = "";
+    if (defaultProductVariant.ProductVariantAttributes.Count > 0)
+    {
+        defaultAttribute = defaultProductVariant.ProductVariantAttributes[0];
+        controlId = string.Format("product_attribute_{0}_{1}_{2}", defaultAttribute.ProductVariantId, defaultAttribute.ProductAttributeId, defaultAttribute.Id);
+    }
+}
+    
+<div class="add-to-cart-panel">
+    @if (!String.IsNullOrEmpty(Request.QueryString["OrderId"]) || defaultProductVariant.ProductVariantAttributes.Count == 0 || !defaultProductVariant.ProductVariantAttributes.Any(s => s.Name == "Order Id"))
+    {
+        <input type="button" class="button-1 add-to-cart-button" value="@(AddToCart.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" data-productvariantid="@AddToCart.ProductVariantId" onclick="AjaxCart.addproductvarianttocart('@Url.RouteUrl("AddProductVariantToCart", new { productVariantId = AddToCart.ProductVariantId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })    ', '#product-details-form');return false;" />   
+        <!--<script type="text/javascript">
+            AjaxCart.addproductvarianttocart('@Url.RouteUrl("AddProductVariantToCart", new { productVariantId = AddToCart.ProductVariantId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })    ', '#product-details-form');return false;
+        </script>-->
+        <input runat="server" type="hidden" id="@controlId" name="@controlId" value="@Request["OrderId"]" />
+    }
+    else
+    {
+        <a href="@Url.Action("Personalize")" style="font-size: large; color: red; text-decoration: underline;" id="personalize">Personalize</a>
+    }
+</div>
+<script type="text/javascript">
+    $('#personalize').click(function (e) {
+        e.preventDefault();
+        //redirect to required URL
+        setLocation('@(Url.Action("Personalize"))?productId=' + @Model.Id);
+        return false;
+    });
+</script>
