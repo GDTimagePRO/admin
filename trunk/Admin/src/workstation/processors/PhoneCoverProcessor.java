@@ -13,6 +13,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 import model.Design;
+import model.Design2;
 import workstation.processors.PageSizeMarginProcessorConfig.PageSizeMarginConfig;
 import workstation.util.Pdf;
 
@@ -149,6 +150,21 @@ public class PhoneCoverProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/pdf");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		if (configUI == null) {
+			//configUI = new PageSizeMarginProcessorConfig(designs, this, _pageWidth, _pageHeight, _marginLeft, _marginTop);
+			configUI.show();
+		}
+		return configUI;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

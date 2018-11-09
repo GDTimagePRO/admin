@@ -10,7 +10,9 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import workstation.util.File;
 import workstation.util.XLS;
 import model.Design;
+import model.Design2;
 import model.OrderItem;
+import model.OrderItem2;
 import model.ProductConfigJson;
 import model.ShippingInformation;
 
@@ -75,6 +77,28 @@ public class FedexShippingProcessor extends PrintProcessor {
 		line.append("");
 		f.addLine(line.toString());
 	}
+	
+	private void addShippingInfo(File f, OrderItem2 order) throws ParseException {
+		/*ShippingInformation info = order.getShippingInformation();
+		StringBuilder line = new StringBuilder();
+		addString(line, info.getCompany());
+		addString(line, info.getFirstName() + " " + info.getLastName());
+		addString(line, info.getAddress1());
+		addString(line, info.getAddress2());
+		addString(line, info.getCity());
+		addString(line, info.getStateProvince());
+		addString(line, info.getZipPostalCode());
+		addString(line, "");
+		addString(line, info.getEmailAddress());
+		int weight = 0;
+		for (Design design : order.getDesigns()) {
+			ProductConfigJson configJson = ProductConfigJson.getProductConfig(design.getProduct().getConfigJson());
+			weight += configJson.weight;
+		}
+		addString(line, String.valueOf(weight));
+		line.append("");
+		f.addLine(line.toString());*/
+	}
 
 	@Override
 	protected void print(Observer observer, Design[] designs) throws Exception {
@@ -88,6 +112,31 @@ public class FedexShippingProcessor extends PrintProcessor {
 			}
 			observer.setProgress((float) (i + 1) / total, "Processing : " + designs[i].getId());
 		}
+		StreamResource downloadResource = new StreamResource(f, _name + ".csv");
+		observer.setProgress(1, "Done");
+		downloadResource.setMIMEType("text/csv");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		File f = new File();
+		int total = designs.length;
+		f.addLine(createHeader());
+		addShippingInfo(f, designs[0].getOrderItem(designs[0].getOrder_item()));
+		/*for (int i = 1; i < designs.length; i++) {
+			if (i < designs.length && designs[i-1].getOrderItem().getId() != designs[i].getOrderItem().getId()) {
+				addShippingInfo(f,  designs[i].getOrderItem());
+			}
+			observer.setProgress((float) (i + 1) / total, "Processing : " + designs[i].getDesign_id());
+		}*/
 		StreamResource downloadResource = new StreamResource(f, _name + ".csv");
 		observer.setProgress(1, "Done");
 		downloadResource.setMIMEType("text/csv");

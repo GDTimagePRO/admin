@@ -73,7 +73,7 @@ public class AdminUI extends UI {
 				JaasAccessControl.login(loginEvent.getUsername(), loginEvent.getPassword());
 				navigator.navigateTo(TableView.NAME);
 			} catch (ServletException e) {
-				Notification.show("Error logging in", Type.ERROR_MESSAGE);
+				Notification.show(e.getMessage(), Type.ERROR_MESSAGE);
 			}
 		}
 	}

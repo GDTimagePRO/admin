@@ -14,6 +14,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import model.Design;
+import model.Design2;
 
 import org.json.JSONException;
 
@@ -127,7 +128,7 @@ public class RGCLabelProcessor extends PrintProcessor {
 		for(int i=0; i<designs.length; i++)
 		{
 			String settings = prop.getProperty("RGC_Label");
-			String zpl = convert.getAgentLabel(designs[i].getDesignJSON(), settings);
+			String zpl = convert.getAgentLabel(designs[i].getDesignJson(), settings);
 			f.addText(zpl);
 			observer.setProgress((float)(i+1) / total);
 		}
@@ -136,5 +137,17 @@ public class RGCLabelProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/zpl");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -23,6 +23,7 @@ import com.vaadin.ui.Component;
 
 import model.Customer;
 import model.Design;
+import model.Design2;
 import model.OrderItem;
 import concurrency.JobManager.Observer;
 
@@ -212,5 +213,17 @@ public class ProductionSheetProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/pdf");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 import model.Design;
+import model.Design2;
 import workstation.util.Pdf;
 
 import com.itextpdf.text.DocumentException;
@@ -116,6 +117,18 @@ public class TrioIndexProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/pdf");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);	
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

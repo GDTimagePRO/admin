@@ -15,9 +15,9 @@ public class DesignProcessorFactory
 		DynamicLaserBlack,
 		DynamicLaserIndex,
 		Summary,
-		MRCANTrio,
-		RGCIndex,
-		RGCLabel,
+		//MRCANTrio,
+		//RGCIndex,
+		//RGCLabel,
 		Trio,
 		TrioIndex,
 		Polymer,
@@ -35,8 +35,11 @@ public class DesignProcessorFactory
 		PackingSlipProcessor,
 		ProductionSheet,
 		BatchInput,
-		JaneBatchInput
-		//,TestProcessor
+		BatchInput2,
+		JaneBatchInput,
+		JaneBatchInput2,
+		ZulilyXSL,
+		ZulilyXSL2
 	}
 	
 	
@@ -49,9 +52,9 @@ public class DesignProcessorFactory
 		_processors.put(DesignProcessorType.DynamicLaserBlack, DynamicLaserBlack.class);
 		_processors.put(DesignProcessorType.DynamicLaserIndex, DynamicLaserIndexProcessor.class);
 		_processors.put(DesignProcessorType.Summary, SummaryProcessor.class);
-		_processors.put(DesignProcessorType.MRCANTrio, MRCanTrioProcessor.class);
-		_processors.put(DesignProcessorType.RGCLabel, RGCLabelProcessor.class);
-		_processors.put(DesignProcessorType.RGCIndex, RGCIndexProcessor.class);
+		//_processors.put(DesignProcessorType.MRCANTrio, MRCanTrioProcessor.class);
+		//_processors.put(DesignProcessorType.RGCLabel, RGCLabelProcessor.class);
+		//_processors.put(DesignProcessorType.RGCIndex, RGCIndexProcessor.class);
 		_processors.put(DesignProcessorType.Trio, TrioProcessor.class);
 		_processors.put(DesignProcessorType.TrioIndex, TrioIndexProcessor.class);
 		_processors.put(DesignProcessorType.Polymer, PolymerProcessor.class);
@@ -69,8 +72,11 @@ public class DesignProcessorFactory
 		_processors.put(DesignProcessorType.PackingSlipProcessor, PackingSlipProcessor.class);
 		_processors.put(DesignProcessorType.ProductionSheet, ProductionSheetProcessor.class);
 		_processors.put(DesignProcessorType.BatchInput, BatchInputProcessor.class);
+		_processors.put(DesignProcessorType.BatchInput2, BatchInputProcessor2.class);
 		_processors.put(DesignProcessorType.JaneBatchInput, JaneBatchInputProcessor.class);
-		//_processors.put(DesignProcessorType.TestProcessor, TestProcessor.class);
+		_processors.put(DesignProcessorType.JaneBatchInput2, JaneBatchInputProcessor2.class);
+		_processors.put(DesignProcessorType.ZulilyXSL, ZulilyXSLProcessor.class);
+		_processors.put(DesignProcessorType.ZulilyXSL2, ZulilyXSLProcessor2.class);
 	}
 	
 	/*private static final Class<?> _processors[] = new Class<?>[] {

@@ -12486,3 +12486,8 @@ div.v-layout.v-horizontal.v-widget {
 .admin .v-textarea {
 	resize: both;
 }
+
+.redemptionMenuBar .v-menubar-menuitem-caption {
+    background: #000040; /* Dark blue */
+    text-decoration: underline;
+}

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import model.Design;
+import model.Design2;
 import workstation.processors.PageSizeMarginProcessorConfig.PageSizeMarginConfig;
 import workstation.util.Pdf;
 
@@ -86,6 +87,19 @@ public class PolymerIndexProcessor extends PrintProcessor {
 		pdf.addTextAt("Order # " + design.getOrderItem().getExternalOrderId(), _fontSize, 90f, x + productFrameWidth + _textSpacingId, y + 4f);
 		pdf.addTextAt("Color " + design.getDesignData().scene.colors.ink.name, _fontSize, 90f, x + productFrameWidth + _textSpacingColor, y + 4f);
 	}
+	
+	private void addDesigntoPDF2(Design2 design, Pdf pdf, float x, float y) throws DocumentException, MalformedURLException, IOException {
+		URL imageUrl = new URL(getGenesysURL() + "/GetImage?id=" + "designs/199142_hd.png"); //design.getDesignImageId_HD());
+		Image image = Image.getInstance(imageUrl);
+		float productFrameHeight = design.getFrameHeight(design.getProduct());
+		float productFrameWidth = design.getFrameWidth(design.getProduct());
+		float productHeight = design.getHeight(design.getProduct());
+		float productWidth = design.getWidth(design.getProduct());
+		
+		pdf.addImageAt(image, x + (productFrameWidth - productWidth) / 2, y + (productFrameHeight - productHeight) / 2, productWidth, productHeight);
+		pdf.addTextAt("Order # " + design.getOrderItem(design.getOrder_item()), _fontSize, 90f, x + productFrameWidth + _textSpacingId, y + 4f);
+		//pdf.addTextAt("Color " + design.getDesignData().scene.colors.ink.name, _fontSize, 90f, x + productFrameWidth + _textSpacingColor, y + 4f);
+	}
 
 	protected void print(Observer observer, Design[] designs) throws MalformedURLException, DocumentException, IOException {
 		Rectangle pageSize = new Rectangle(Utilities.millimetersToPoints(_pageWidth), Utilities.millimetersToPoints(_pageHeight));
@@ -117,6 +131,55 @@ public class PolymerIndexProcessor extends PrintProcessor {
 				maxY = (float) productFrameHeight;
 			}
 			observer.setProgress((float)(i+1) / total, "Processing : " +  designs[i].getId());
+		}
+		p.close();
+		observer.setProgress(1, "Done");
+		StreamResource downloadResource = new StreamResource(p, _name + "_" + new SimpleDateFormat("dd-MM-yy").format(new Date()) + ".pdf");
+		downloadResource.setMIMEType("application/pdf");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		if (configUI == null) {
+			//configUI = new PageSizeMarginProcessorConfig(designs, this, _pageWidth, _pageHeight, _marginLeft, _marginTop);
+			configUI.show();
+		}
+		return configUI;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		Rectangle pageSize = new Rectangle(Utilities.millimetersToPoints(_pageWidth), Utilities.millimetersToPoints(_pageHeight));
+		final float marginy = _pageHeight - _marginTop;
+		Pdf p = new Pdf(pageSize);
+		float x = _marginLeft, y = marginy;
+		float maxY = 0;
+		float total = designs.length;
+		
+		for(int i=0; i<designs.length; i++)
+		{
+			float productFrameHeight = designs[i].getFrameHeight(designs[i].getProduct());
+			float productFrameWidth = designs[i].getFrameWidth(designs[i].getProduct());
+			
+			if (x + productFrameWidth + 10 > _pageWidth) {
+				y = y - maxY - _imageSpacing;
+				x = _marginLeft;
+			}
+			if (y - productFrameHeight <= 2) {
+				p.addNewPage();
+				x = _marginLeft;
+				y = marginy;
+			}
+			
+			addDesigntoPDF2(designs[i], p, x, y - productFrameHeight);
+			x += productFrameWidth + _imageSpacing;
+			
+			if (productFrameHeight > maxY) {
+				maxY = (float) productFrameHeight;
+			}
+			observer.setProgress((float)(i+1) / total, "Processing : " +  designs[i].getDesign_id());
 		}
 		p.close();
 		observer.setProgress(1, "Done");

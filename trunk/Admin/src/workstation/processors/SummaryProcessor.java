@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import model.Design;
+import model.Design2;
 import model.OrderItem;
 import model.ProductConfigJson;
 import model.ShippingInformation;
@@ -54,36 +55,43 @@ public class SummaryProcessor extends DesignProcessor {
 			x.writeCell(sheet, orderId);
 		}
 		String gdtID = String.valueOf(order.getId());
-		x.writeCell(sheet, gdtID);
-		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
-		x.writeCell(sheet, format.format(order.getDateCreated()));
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "Thick Envelopes");
-		x.writeCell(sheet, "First-Class Mail");
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "");
-		/*int weight = 0;
-		for (Design design : order.getDesigns()) {
-			ProductConfigJson configJson = ProductConfigJson.getProductConfig(design.getProduct().getConfigJson());
-			weight += configJson.weight;
-		}*/
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, "");
-		x.writeCell(sheet, info.getFirstName() + " " + info.getLastName());
-		x.writeCell(sheet, info.getFirstName());
-		x.writeCell(sheet, info.getLastName());
-		x.writeCell(sheet, info.getCompany());
-		x.writeCell(sheet, info.getAddress1());
-		x.writeCell(sheet, info.getAddress2());
-		x.writeCell(sheet, info.getCity());
-		x.writeCell(sheet, info.getStateProvince());
-		x.writeCell(sheet, info.getZipPostalCode());
-		x.writeCell(sheet, info.getCountry());
-		x.writeCell(sheet, info.getEmailAddress());
-		x.createNewRow(sheet);
+		try {
+			x.writeCell(sheet, gdtID);
+			SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+			x.writeCell(sheet, format.format(order.getDateCreated()));
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "Thick Envelopes");
+			x.writeCell(sheet, "First-Class Mail");
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "");
+			/*int weight = 0;
+			for (Design design : order.getDesigns()) {
+				ProductConfigJson configJson = ProductConfigJson.getProductConfig(design.getProduct().getConfigJson());
+				weight += configJson.weight;
+			}*/
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, "");
+			x.writeCell(sheet, info.getFirstName() + " " + info.getLastName());
+			x.writeCell(sheet, info.getFirstName());
+			x.writeCell(sheet, info.getLastName());
+			x.writeCell(sheet, info.getCompany());
+			x.writeCell(sheet, info.getAddress1());
+			x.writeCell(sheet, info.getAddress2());
+			x.writeCell(sheet, info.getCity());
+			x.writeCell(sheet, info.getStateProvince());
+			x.writeCell(sheet, info.getZipPostalCode());
+			x.writeCell(sheet, info.getCountry());
+			x.writeCell(sheet, info.getEmailAddress());
+			x.createNewRow(sheet);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			x.writeCell(sheet, "");
+			x.createNewRow(sheet);
+		}
 	}
 
 	@Override
@@ -163,6 +171,91 @@ public class SummaryProcessor extends DesignProcessor {
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
 		cleanup();
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void run2(Observer observer, List<Design2> designs) {
+		XLS xls = new XLS();
+		int i = 1;
+		int total = designs.size();
+		List<Long> processedOrders = new ArrayList<Long>();
+		
+		HashMap<String, HSSFSheet> sheets = new HashMap<String, HSSFSheet>();
+		HSSFSheet summarySheet = xls.createNewWorksheet("Summary Report", "Submit Time", "Order ID", "Design ID", "Product", "Color");
+		HSSFSheet shippingSheet = xls.createNewWorksheet(
+			"Shipping Info", "OrderID", "GDT ID", "OrderDate", "Status", "Mailpiece", "Mailclass", "TrackingService",
+			"PackageValue", "Weight", "Length", "Width", "Height", "PrintedMessage", "Fullname", "Firstname",
+			"Lastname", "Company", "Address1", "Address2", "City", "State/Province", "Zip/Postal Code", "Country", "Email"  
+														);
+		
+		/*for (Design2 ed : designs) {
+			Design2 d = ed;
+			observer.logState("Processing : " +  d.getDesign_id());
+			//Main worksheet
+			xls.writeCell(summarySheet, d.getOrderItem(d.getOrder_item()).getOrder(d.orderItem)); 
+			String orderId = String.valueOf(d.getOrderItem().getExternalOrderId());
+			if ( !d.getOrderItem().getExternalSystemName().equals("Redemption") ) {
+				int idLen = orderId.length();
+				xls.writeCell(summarySheet, orderId.substring(0,idLen-3) + "-" + orderId.substring(idLen-3, idLen) );
+			} else {
+				xls.writeCell(summarySheet, orderId);
+			}
+			xls.writeCell(summarySheet, d.getId());
+			if (d.getProduct() != null) {
+				xls.writeCell(summarySheet, d.getProduct().getLongName());
+			} else {
+				xls.writeCell(summarySheet, "");
+			}
+			xls.writeCell(summarySheet, d.getDesignData().scene.colors.ink.name);
+			xls.createNewRow(summarySheet);
+			
+			//if an order hasn't already been given a spot on the shipping table 
+			if ( !(processedOrders.contains(d.getOrderItem().getExternalOrderId())) ) {
+				processedOrders.add(d.getOrderItem().getExternalOrderId());
+				try{
+					addShippingInfo(xls, shippingSheet, d.getOrderItem());
+				} catch( ParseException e) {
+					//NOOP
+				}
+			}
+			
+			if (d.getProduct() != null) { //creates a new worksheet for each type of product
+				if (!sheets.keySet().contains(d.getProduct().getProductsCategory().getName())) {
+					HSSFSheet sheet = xls.createNewWorksheet(d.getProduct().getProductsCategory().getName(), "Submit Time", "Order ID", "Design ID", "Product", "Color");
+					sheets.put(d.getProduct().getProductsCategory().getName(), sheet);
+				}
+				
+				HSSFSheet sheet = sheets.get(d.getProduct().getProductsCategory().getName());
+				xls.writeCell(sheet, d.getOrderItem().getDateCreated());
+				orderId = String.valueOf(d.getOrderItem().getExternalOrderId());
+				if ( !d.getOrderItem().getExternalSystemName().equals("Redemption") ) {
+					int idLen = orderId.length();
+					xls.writeCell(sheet, orderId.substring(0,idLen-3) + "-" + orderId.substring(idLen-3, idLen) );
+				} else {
+					xls.writeCell(sheet, orderId);
+				}
+				
+				xls.writeCell(sheet, d.getId());
+				xls.writeCell(sheet, d.getProduct().getLongName());
+				xls.writeCell(sheet, d.getDesignData().scene.colors.ink.name);
+				xls.createNewRow(sheet);
+			}
+			
+			observer.setProgress((float)(i) / total);
+			i++;
+		}
+		observer.setProgress(1, "Done");
+		StreamResource downloadResource = new StreamResource(xls, "Summary-" + new SimpleDateFormat("dd-MM-yy").format(new Date()) +  ".xls");
+		downloadResource.setMIMEType("application/vnd.ms-excel");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);
+		cleanup();*/
 	}
 
 }

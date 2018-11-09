@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import model.Design;
+import model.Design2;
 import workstation.processors.PageSizeMarginProcessorConfig.PageSizeMarginConfig;
 import workstation.util.Pdf;
 
@@ -89,6 +90,21 @@ public class DynamicLaserBlack extends PrintProcessor {
 		pdf.addLineAtSpotColor(_cutLineWidth, x + _cutLineShort, y + productFrameHeight, x + productFrameWidth - _cutLineShort, y + productFrameHeight);
 	}
 	
+	private void addDesigntoPDF2(Design2 design, Pdf pdf, float x, float y) throws DocumentException, MalformedURLException, IOException {
+		URL imageUrl = new URL(getGenesysURL() + "/GetImage?id=" + "designs/199142_hd.png"); //design.getDesignImageId_HD());
+		Image image = Image.getInstance(imageUrl);
+		float productFrameHeight = design.getFrameHeight(design.getProduct());
+		float productFrameWidth = design.getFrameWidth(design.getProduct());
+		float productHeight = design.getHeight(design.getProduct());
+		float productWidth = design.getWidth(design.getProduct());
+		pdf.addImageAt(image, x + (productFrameWidth - productWidth) / 2f, y + (productFrameHeight - productHeight) / 2f, productWidth, productHeight);
+		pdf.addRectangleUnder(productFrameWidth + (_cutLineShort * 2), productFrameHeight + (_cutLineShort * 2), x - _cutLineShort, y - _cutLineShort, 255, 255, 255);
+		pdf.addLineAtSpotColor(_cutLineWidth, x + _cutLineShort, y, x + productFrameWidth - _cutLineShort, y);
+		pdf.addLineAtSpotColor(_cutLineWidth, x, y + _cutLineShort, x, y + productFrameHeight - _cutLineShort);
+		pdf.addLineAtSpotColor(_cutLineWidth, x + productFrameWidth, y + _cutLineShort, x + productFrameWidth, y + productFrameHeight - _cutLineShort);
+		pdf.addLineAtSpotColor(_cutLineWidth, x + _cutLineShort, y + productFrameHeight, x + productFrameWidth - _cutLineShort, y + productFrameHeight);
+	}
+	
 	protected void print(Observer observer, Design[] designs) throws MalformedURLException, DocumentException, IOException {
 		Rectangle pageSize = new Rectangle(Utilities.millimetersToPoints(_pageWidth), Utilities.millimetersToPoints(_pageHeight));
 		final float marginy = _pageHeight - _marginTop;
@@ -120,6 +136,56 @@ public class DynamicLaserBlack extends PrintProcessor {
 				maxY = (float) productFrameHeight;
 			}
 			observer.setProgress((float)(i+1) / total, "Processing : " +  designs[i].getId());
+		}
+		p.close();
+		observer.setProgress(1, "Done");
+		StreamResource downloadResource = new StreamResource(p, _name + "_" + new SimpleDateFormat("dd-MM-yy").format(new Date()) + ".pdf");
+		downloadResource.setMIMEType("application/pdf");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		if (configUI == null) {
+			//configUI = new PageSizeMarginProcessorConfig(designs, this, _pageWidth, _pageHeight, _marginLeft, _marginTop);
+			configUI.show();
+		}
+		return configUI;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		Rectangle pageSize = new Rectangle(Utilities.millimetersToPoints(_pageWidth), Utilities.millimetersToPoints(_pageHeight));
+		final float marginy = _pageHeight - _marginTop;
+		Pdf p = new Pdf(pageSize, 0, 0, 0, true);
+		float x = _marginLeft, y = marginy;
+		float maxY = 0;
+		float total = designs.length;
+		
+		for(int i=0; i<designs.length; i++)
+		{
+			float productFrameHeight = designs[i].getFrameHeight(designs[i].getProduct());
+			float productFrameWidth = designs[i].getFrameWidth(designs[i].getProduct());
+			
+			if (x + productFrameWidth + 10 > _pageWidth) {
+				y = y - maxY;
+				x = _marginLeft;
+				maxY = 0;
+			}
+			if (y - productFrameHeight <= 2) {
+				p.addNewPage(0, 0, 0);
+				x = _marginLeft;
+				y = marginy;
+			}
+			
+			addDesigntoPDF2(designs[i], p, x, y - productFrameHeight);
+			x += productFrameWidth;
+			
+			if (productFrameHeight > maxY) {
+				maxY = (float) productFrameHeight;
+			}
+			observer.setProgress((float)(i+1) / total, "Processing : " +  designs[i].getDesign_config_json());
 		}
 		p.close();
 		observer.setProgress(1, "Done");

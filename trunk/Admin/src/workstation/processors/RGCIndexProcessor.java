@@ -14,6 +14,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import model.Design;
+import model.Design2;
 
 import org.json.JSONException;
 
@@ -116,7 +117,7 @@ public class RGCIndexProcessor extends PrintProcessor {
 			int template_id = config.get("templ_id").getAsInt();
 			String name = "RGC_" + template_id;
 			String settings = prop.getProperty(name);
-			String zpl = convert.getFlashIndex(designs[i].getDesignJSON(), settings, template_id);
+			String zpl = convert.getFlashIndex(designs[i].getDesignJson(), settings, template_id);
 			f.addText(zpl);
 			observer.setProgress((float)(i+1) / total);
 		}
@@ -125,6 +126,18 @@ public class RGCIndexProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/zpl");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+		
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
 		
 	}
 }

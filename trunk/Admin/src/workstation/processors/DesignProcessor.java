@@ -9,6 +9,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import model.Design;
+import model.Design2;
 
 import com.admin.ui.AdminSerlvetListener;
 import com.vaadin.addon.jpacontainer.EntityItem;
@@ -77,6 +78,7 @@ public abstract class DesignProcessor implements Serializable
 	 * @return CustomComponent or null.
 	 */
 	public abstract Component getConfigUI(List<EntityItem<Design>> designs);
+	public abstract Component getConfigUI2(List<Design2> designs);
 	
 	public Component getObserverUI() { 
 		if (_observerUI == null) {
@@ -90,22 +92,29 @@ public abstract class DesignProcessor implements Serializable
 	 * @param designs
 	 */
 	protected abstract void run(Observer observer, List<EntityItem<Design>> designs);
+	protected abstract void run2(Observer observer, List<Design2> designs);
 	
 	//Note: Done to avoid pulling pulling the current context into the JobProcessor context 
 	private static final class DisconnectedRunnable implements IJobRunnable	
 	{
 		private final DesignProcessor _workerInstance;
 		private final List<EntityItem<Design>> _designs;
+		private final List<Design2> _designs2;
 		
-		public DisconnectedRunnable(DesignProcessor workerInstance, List<EntityItem<Design>> designs)
+		public DisconnectedRunnable(DesignProcessor workerInstance, List<EntityItem<Design>> designs, List<Design2> designs2)
 		{
 			_workerInstance = workerInstance;
 			_designs = designs;
+			_designs2 = designs2;
 		}
 		
 		public void run(Observer observer)
 		{
-			_workerInstance.run(observer, _designs);
+			if(_designs != null)
+				_workerInstance.run(observer, _designs);
+			
+			if(_designs2 != null)
+				_workerInstance.run2(observer, _designs2);
 		}
 	}
 	
@@ -136,6 +145,30 @@ public abstract class DesignProcessor implements Serializable
             _jobId = jobManager.startJob(
             		new DisconnectedRunnable(
             			workerInstance, 
+            			designs,
+            			null
+            		),
+            		listener, 
+            		UI.getCurrent()
+            	);
+            return _jobId;
+    	}
+    	catch(Exception e) { throw new RuntimeException(e); } 
+	}
+	
+	public final int start2(final List<Design2> designs, final IObserverListener listener)
+	{
+        JobManager jobManager = null;
+    	try
+    	{
+            final DesignProcessor workerInstance = this.getClass().newInstance();
+            workerInstance.loadConfig(this.saveConfig());
+    		Context ctx = new InitialContext();
+            jobManager = (JobManager)ctx.lookup(JobManager.INSTANCE_NAME);
+            _jobId = jobManager.startJob(
+            		new DisconnectedRunnable(
+            			workerInstance, 
+            			null,
             			designs
             		),
             		listener, 
@@ -154,5 +187,12 @@ public abstract class DesignProcessor implements Serializable
 			processor.start(designs, (IObserverListener)observerUi);
 		}
 	}
-
+	public static void startProcessor2(DesignProcessor processor, List<Design2> designs)
+	{
+		Component observerUi = processor.getObserverUI();
+		Component configUI = processor.getConfigUI2(designs);
+		if (configUI == null) {
+			processor.start2(designs, (IObserverListener)observerUi);
+		}
+	}
 }

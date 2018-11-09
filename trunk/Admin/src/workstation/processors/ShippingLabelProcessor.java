@@ -10,6 +10,7 @@ import java.util.List;
 
 import model.Customer;
 import model.Design;
+import model.Design2;
 import model.ShippingInformation;
 import workstation.util.Pdf;
 
@@ -181,6 +182,48 @@ public class ShippingLabelProcessor extends PrintProcessor {
 
 			observer.setProgress((float) (i + 1) / total, "Processing : "
 					+ designs[i].getId());
+		}
+
+		pdf.close();
+		StreamResource downloadResource = new StreamResource(pdf, _name + "_"
+				+ new SimpleDateFormat("dd-MM-yy").format(new Date()) + ".pdf");
+		observer.setProgress(1, "Done");
+		downloadResource.setMIMEType("application/pdf");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		Rectangle pageSize = new Rectangle(
+				Utilities.millimetersToPoints(_pageWidth),
+				Utilities.millimetersToPoints(_pageHeight));
+		Pdf pdf = new Pdf(pageSize);
+		final float marginy = _pageHeight - _marginTop;
+		float x = _marginLeft, y = marginy;
+		float rowHeight = 25.4f;
+		float total = designs.length;
+
+		for (int i = 0; i < designs.length; i++) {
+
+			if (y - rowHeight < 0f) {
+				pdf.addNewPage();
+				x = _marginLeft;
+				y = marginy;
+			}
+
+			/*addDesign(pdf, designs[i], designs[i].getOrderItem().getShippingInformation(),
+					designs[i].getOrderItem().getCustomer(), x, y);*/
+			y -= rowHeight;
+
+			observer.setProgress((float) (i + 1) / total, "Processing : "
+					+ designs[i].getDesign_id());
 		}
 
 		pdf.close();

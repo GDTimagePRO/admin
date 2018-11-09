@@ -13,6 +13,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
 import model.Design;
+import model.Design2;
 import model.OrderItem;
 import model.OrderItemsProcessingStageName;
 
@@ -33,6 +34,7 @@ public abstract class PrintProcessor extends DesignProcessor {
 	}
 	
 	protected abstract void print(Observer observer, Design[] designs) throws Exception;
+	protected abstract void print2(Observer observer, Design2[] designs) throws Exception;
 	
 	protected void updateOrderItems(final List<EntityItem<Design>> designs) {
 		
@@ -83,6 +85,25 @@ public abstract class PrintProcessor extends DesignProcessor {
 			print(observer, designsArray);
 			if (!index) {
 				updateOrderItems(designs);
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		cleanup();
+	}
+	
+	@Override
+	protected void run2(Observer observer, List<Design2> designs) {
+		try {
+			Design2[] designsArray = new Design2[designs.size()];
+			int i = 0;
+			for (Design2 d : designs) {
+				designsArray[i] = d;
+				i++;
+			}
+			print2(observer, designsArray);
+			if (!index) {
+				//updateOrderItems(designs);
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);

@@ -10,6 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import workstation.util.File;
 import workstation.util.XLS;
 import model.Design;
+import model.Design2;
 import model.OrderItem;
 import model.ProductConfigJson;
 import model.ShippingInformation;
@@ -114,6 +115,18 @@ public class XLSShippingProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/vnd.ms-excel");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

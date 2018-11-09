@@ -1,15 +1,19 @@
 package views;
 
+import java.sql.SQLException;
+
 import javax.inject.Inject;
 
 import model.User;
 import views.tables.BarcodeTable;
 import views.tables.ProductCategoryTable;
 import views.tables.ProductTable;
+import views.tables.Redemption;
 import views.tables.TemplateCategoryTable;
 import views.tables.TemplateTable;
 import views.tables.UserTable;
 import views.tables.WrkstTable;
+import views.tables.WrkstTable2;
 
 import com.admin.ui.AdminUI;
 import com.admin.ui.CurrentUser;
@@ -91,8 +95,42 @@ public class TableView extends CustomComponent implements View {
 		if (currentUser.hasPermission(ProductCategoryTable.PERMISSION_ACCESS)) {
 			tabSheet.addTab(new ProductCategoryTable(), "Product Categories");
 		}
+		if (currentUser.hasPermission(Redemption.PERMISSION_ACCESS)) {
+			try {
+				tabSheet.addTab(new Redemption(currentUser), "Redemption");
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		if (currentUser.hasPermission(WrkstTable.PERMISSION_ACCESS)) {
 			tabSheet.addTab(new WrkstTable(currentUser), "Workstation");
+		}
+		if (currentUser.hasPermission(WrkstTable2.PERMISSION_ACCESS)) {
+			try {
+				tabSheet.addTab(new WrkstTable2(currentUser), "Workstation Test");
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		//tabSheet.addTab(new FileManagement(), "Image Management");
 		if (currentUser.hasPermission(UserTable.PERMISSION_ACCESS)) {

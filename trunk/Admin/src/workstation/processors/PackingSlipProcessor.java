@@ -11,6 +11,7 @@ import java.util.List;
 
 import model.Customer;
 import model.Design;
+import model.Design2;
 import model.OrderItem;
 import model.ShippingInformation;
 import workstation.util.Pdf;
@@ -38,7 +39,7 @@ public class PackingSlipProcessor extends PrintProcessor {
 	private PageSizeMarginProcessorConfig configUI = null;
 	private String _config = null;
 
-	protected PackingSlipProcessor() {
+	public PackingSlipProcessor() {
 		super("Packing Slip", "Print packing slips", true);
 	}
 
@@ -102,36 +103,42 @@ public class PackingSlipProcessor extends PrintProcessor {
          //    infoTable.addCell(new Phrase("Company: " + order.getShippingInformation().getCompany()));
          //else
          //    infoTable.addCell(new Phrase(""));
-         if (order.getShippingInformation().getCompany() != null && !order.getShippingInformation().getCompany().isEmpty())
-        	 shippingParagraph.add(new Phrase(order.getShippingInformation().getCompany() + "\n"));
-         else
-        	 shippingParagraph.add(new Phrase(""));
+         try {
+			if (order.getShippingInformation().getCompany() != null && !order.getShippingInformation().getCompany().isEmpty())
+				 shippingParagraph.add(new Phrase(order.getShippingInformation().getCompany() + "\n"));
+			 else
+				 shippingParagraph.add(new Phrase(""));
+			//infoTable.addCell(new Phrase("Name: " + order.getShippingInformation().getFirstName() + " " + order.getShippingInformation().getLastName()));
+	         shippingParagraph.add(new Phrase(order.getShippingInformation().getFirstName() + " " + order.getShippingInformation().getLastName() + "\n"));
+	         //infoTable.addCell(new Phrase("Address: " + order.getShippingInformation().getAddress1()));
+	         shippingParagraph.add(new Phrase(order.getShippingInformation().getAddress1() + "\n"));
+	         
+	         //if (order.getShippingInformation().getAddress2() != null && !order.getShippingInformation().getAddress2().isEmpty())
+	         //    infoTable.addCell(new Phrase("Address 2: " + order.getShippingInformation().getAddress2()));
+	         //else
+	         //    infoTable.addCell(new Phrase(""));
 
-         //infoTable.addCell(new Phrase("Name: " + order.getShippingInformation().getFirstName() + " " + order.getShippingInformation().getLastName()));
-         shippingParagraph.add(new Phrase(order.getShippingInformation().getFirstName() + " " + order.getShippingInformation().getLastName() + "\n"));
-         //infoTable.addCell(new Phrase("Address: " + order.getShippingInformation().getAddress1()));
-         shippingParagraph.add(new Phrase(order.getShippingInformation().getAddress1() + "\n"));
-         
-         //if (order.getShippingInformation().getAddress2() != null && !order.getShippingInformation().getAddress2().isEmpty())
-         //    infoTable.addCell(new Phrase("Address 2: " + order.getShippingInformation().getAddress2()));
-         //else
-         //    infoTable.addCell(new Phrase(""));
+	         if (order.getShippingInformation().getAddress2() != null && !order.getShippingInformation().getAddress2().isEmpty())
+	        	 shippingParagraph.add(new Phrase(order.getShippingInformation().getAddress2() + "\n"));
+	         else
+	        	 shippingParagraph.add(new Phrase(""));
 
-         if (order.getShippingInformation().getAddress2() != null && !order.getShippingInformation().getAddress2().isEmpty())
-        	 shippingParagraph.add(new Phrase(order.getShippingInformation().getAddress2() + "\n"));
-         else
-        	 shippingParagraph.add(new Phrase(""));
+	         //infoTable.addCell(new Phrase(String.format("%s, %s %s", order.getShippingInformation().getCity(), order.getShippingInformation().getStateProvince(), order.getShippingInformation().getZipPostalCode())));
+	         shippingParagraph.add(new Phrase(String.format("%s, %s %s\n", order.getShippingInformation().getCity(), order.getShippingInformation().getStateProvince(), order.getShippingInformation().getZipPostalCode())));
+	         //infoTable.addCell(new Phrase(order.getShippingInformation().getCountry()));
+	         shippingParagraph.add(new Phrase(order.getShippingInformation().getCountry()));
 
-         //infoTable.addCell(new Phrase(String.format("%s, %s %s", order.getShippingInformation().getCity(), order.getShippingInformation().getStateProvince(), order.getShippingInformation().getZipPostalCode())));
-         shippingParagraph.add(new Phrase(String.format("%s, %s %s\n", order.getShippingInformation().getCity(), order.getShippingInformation().getStateProvince(), order.getShippingInformation().getZipPostalCode())));
-         //infoTable.addCell(new Phrase(order.getShippingInformation().getCountry()));
-         shippingParagraph.add(new Phrase(order.getShippingInformation().getCountry()));
-
-         //infoTable.addCell(new Phrase(order.getPaymentMethod()));
-         //infoTable.addCell(new Phrase(order.getShippingInformation().getShippingMethod()));
-         shippingCell.addElement(shippingParagraph);
+	         //infoTable.addCell(new Phrase(order.getPaymentMethod()));
+	         //infoTable.addCell(new Phrase(order.getShippingInformation().getShippingMethod()));
+	         shippingCell.addElement(shippingParagraph);
+	         
+	         //end; shipping info
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			shippingParagraph.add(new Phrase(""));
+		}
          infoTable.addCell(shippingCell);
-         //end; shipping info
+         
          
          //order info
          PdfPCell orderCell = new PdfPCell();
@@ -139,7 +146,7 @@ public class PackingSlipProcessor extends PrintProcessor {
          Paragraph orderParagraph = new Paragraph();
          orderCell.setBorder(0);
          orderParagraph.add(new Phrase("Packing Slip"));
-         orderParagraph.add(new Phrase("\nOrder #: " + order.getId() + "\n"));
+         orderParagraph.add(new Phrase("\nOrder #: " + order.getExternalOrderId() + "\n"));
          orderParagraph.add(new Phrase(order.getDateCreated().toString()));
          orderCell.addElement(orderParagraph);
          infoTable.addCell(orderCell);
@@ -196,7 +203,7 @@ public class PackingSlipProcessor extends PrintProcessor {
 	}
 
 	@Override
-	protected void print(Observer observer, Design[] designs)
+	public void print(Observer observer, Design[] designs)
 			throws Exception {
 		Pdf pdf = new Pdf(PageSize.A4);
 		float total = designs.length;
@@ -240,6 +247,18 @@ public class PackingSlipProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/pdf");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

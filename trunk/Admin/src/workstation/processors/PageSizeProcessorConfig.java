@@ -198,8 +198,6 @@ public class PageSizeProcessorConfig extends Window {
 	                _pageWidth.setValue(_pageWidth.getValue() * 0.0393701f);
 	                _vSpacing.setValue(_vSpacing.getValue() * 0.0393701f);
 	                _hSpacing.setValue(_hSpacing.getValue() * 0.0393701f);
-	                _mWidth.setValue(_mWidth.getValue() * 0.0393701f);
-	                _mHeight.setValue(_mHeight.getValue() * 0.0393701f);
 	                
 	                
 				}
@@ -208,8 +206,6 @@ public class PageSizeProcessorConfig extends Window {
 	                _pageWidth.setValue(_pageWidth.getValue() / 0.0393701f);
 	                _vSpacing.setValue(_vSpacing.getValue() / 0.0393701f);
 	                _hSpacing.setValue(_hSpacing.getValue() / 0.0393701f);
-	                _mWidth.setValue(_mWidth.getValue() / 0.0393701f);
-	                _mHeight.setValue(_mHeight.getValue() / 0.0393701f);
 				}
 			}
 		
@@ -255,23 +251,16 @@ public class PageSizeProcessorConfig extends Window {
 	}
 
 	protected void addImageSpacing() {
-		final TextField vSpace = new TextField ("Vertical Spacing", _vSpacing);
+		final TextField vSpace = new TextField ("Image Spacing", _vSpacing);
 		vSpace.setRequired(true);
-		vSpace.setRequiredError("Must specify a length");
+		vSpace.setRequiredError("Must specify an image spacing");
 		_rootLayout.addComponent(vSpace);
-		
-		final TextField hSpace = new TextField ("Horizontal Spacing", _hSpacing);
-		hSpace.setRequired(true);
-		hSpace.setRequiredError("Must specify a length");
-		_rootLayout.addComponent(hSpace);
 	}
 	
 	protected void setImageSize() {
-		final TextField maxWidth = new TextField ("Image Width(max)", _mWidth);
+		final TextField maxWidth = new TextField ("Image Size (%)", _mWidth);
+		_mWidth.setValue(Float.valueOf(100));
 		_rootLayout.addComponent(maxWidth);
-		
-		final TextField maxLength = new TextField ("Image Length(max)", _mHeight);
-		_rootLayout.addComponent(maxLength);
 	}
 	
 	protected String getJson() {
@@ -295,9 +284,7 @@ public class PageSizeProcessorConfig extends Window {
 		config.setPageWidth(_pageWidth.getValue());
 		config.setPageHeight(_pageHeight.getValue());
 		config.setVerticalSpacing(_vSpacing.getValue());
-		config.setHorizontalSpacing(_hSpacing.getValue());
 		config.setImageWidth(_mWidth.getValue());
-		config.setImageHeight(_mHeight.getValue());
 		return config;
 	}
 	
@@ -307,11 +294,11 @@ public class PageSizeProcessorConfig extends Window {
 		setModal(true);
 		setWidth("380px");
 		_rootLayout.setSizeUndefined();
-		final TextField widthBox = new TextField("Width", _pageWidth);
+		final TextField widthBox = new TextField("Page width", _pageWidth);
 		widthBox.setRequired(true);
 		widthBox.setRequiredError("Must specify a width");
 		_rootLayout.addComponent(widthBox);
-		final TextField heightBox = new TextField("Height", _pageHeight);
+		final TextField heightBox = new TextField("Page height", _pageHeight);
 		heightBox.setRequired(true);
 		heightBox.setRequiredError("Must specify a height");
 		_rootLayout.addComponent(heightBox);

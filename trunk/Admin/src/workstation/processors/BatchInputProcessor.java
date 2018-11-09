@@ -8,6 +8,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 /*import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -33,17 +37,26 @@ import org.json.JSONObject;
 
 import util.HTTPHelper;
 import model.Design;
+import model.Design2;
 import model.DesignTemplate;
 import model.Product;
 
 import com.admin.ui.AdminSerlvetListener;
 import com.google.gson.Gson;
 import com.vaadin.addon.jpacontainer.EntityItem;
+import com.vaadin.server.VaadinService;
 import com.vaadin.ui.Component;
 
 import concurrency.JobManager.Observer;
 
 public class BatchInputProcessor extends UploadProcessor {
+	private static final String DATABASE = "jdbc:mysql://localhost:3306/genesys_core?zeroDateTimeBehavior=convertToNull";
+	private static final String USERNAME = "root";
+	//private static final String PASSWORD = "Loucks74";
+	private static final String PASSWORD = "D@n13lD@ng28";
+	Connection conn = null;
+	java.sql.Statement stmt = null;
+	ResultSet rs = null;
 	
 	private UploadFileConfig _configUI = null;
 	
@@ -54,8 +67,8 @@ public class BatchInputProcessor extends UploadProcessor {
 	@Override
 	public Component getConfigUI(List<EntityItem<Design>> designs) {
 		if (_configUI == null) {
-			_configUI = new UploadFileConfig(this, "/tmp/inf_");
-			//_configUI = new UploadFileConfig(this, "C:/testtemp/");
+			_configUI = new UploadFileConfig(this, VaadinService.getCurrent().getBaseDirectory().getAbsolutePath());
+			//_configUI = new UploadFileConfig(this, "D:/");
 			_configUI.show();
 		}
 		return _configUI;
@@ -106,9 +119,13 @@ public class BatchInputProcessor extends UploadProcessor {
 			externalID = rowData[0];
 			try {
 				barcodeJSON = new JSONObject(HTTPHelper.getOutputFromURL(url+"services/get_barcode.php?barcode="+URLEncoder.encode(rowData[1], "UTF-8")));
+				System.out.println(url+"services/get_barcode.php?barcode="+URLEncoder.encode(rowData[1], "UTF-8"));
 				configJSON = new JSONObject(barcodeJSON.getString("configJSON"));
+				System.out.println(configJSON);
 				templateID = configJSON.getJSONArray("items").getJSONObject(0).getInt("templ_id");
+				System.out.println(templateID);
 				productID = configJSON.getJSONArray("items").getJSONObject(0).getInt("prod_id");
+				System.out.println(productID);
 				designJSON = new JSONObject(new JSONObject(HTTPHelper.getOutputFromURL(url+"services/get_design_template.php?templateId="+URLEncoder.encode(String.valueOf(templateID), "UTF-8"))).getString("designJSON"));
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -125,24 +142,64 @@ public class BatchInputProcessor extends UploadProcessor {
 				    "\"country\":\""+rowData[8]+"\"," +
 				    "\"ship_qty\":\""+rowData[9]+"\"" +
 				"}";
-			
+			try {
+				conn = DriverManager.getConnection(DATABASE, USERNAME,PASSWORD);
+				stmt = conn.createStatement();
+				String query = "SELECT id FROM shipping_information ORDER BY id DESC LIMIT 1";
+				rs = stmt.executeQuery(query);
+				rs.next();
+				int newId = rs.getInt("id") + 1;
+				query = "INSERT INTO shipping_information VALUES(" + newId +
+						"," + rowData[0] + ", '" + rowData[2] + "', '" + rowData[3] + "', '" + rowData[4] + "', '', '" +
+						rowData[5] + "', '" + rowData[6] + "', " + rowData[7] + ", '" + rowData[8] + "', '', '', " + 
+						rowData[9] + ", null)";
+				stmt.executeUpdate(query);
+				rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			for(int i = 0, j = 0; i < elementArray.length(); i++ ) {
 				try {
-					if( elementArray.getJSONObject(i).getString("className").equals("TextElement") ) {
-						if(rowData[10+j].charAt(0) == '\"') {
-							elementArray.getJSONObject(i).put("title",rowData[10+j].substring(1, rowData[10+j].length()-1));
-						} else {
-							elementArray.getJSONObject(i).put("title",rowData[10+j]);
+					if(elementArray.getJSONObject(i).has("textFormat")) {
+						if( elementArray.getJSONObject(i).getString("className").equals("TextElement") ) {
+							if(elementArray.getJSONObject(i).getInt("textFormat") == 0)
+							{
+								if(rowData[10+j].charAt(0) == '\"') {
+									elementArray.getJSONObject(i).put("title",rowData[10+j].substring(1, rowData[10+j].length()-1));
+								} else {
+									elementArray.getJSONObject(i).put("title",rowData[10+j]);
+								}
+							} else if (elementArray.getJSONObject(i).getInt("textFormat") == 1)
+							{
+								if(rowData[10+j].charAt(0) == '\"') {
+									elementArray.getJSONObject(i).put("title",rowData[10+j].substring(1, rowData[10+j].length()-1).toUpperCase());
+								} else {
+									elementArray.getJSONObject(i).put("title",rowData[10+j].toUpperCase());
+								}
+							}
+							
+							j++;
 						}
-						
-						j++;
+					} else {
+						if( elementArray.getJSONObject(i).getString("className").equals("TextElement") ) {
+							if(rowData[10+j].charAt(0) == '\"') {
+								elementArray.getJSONObject(i).put("title",rowData[10+j].substring(1, rowData[10+j].length()-1));
+							} else {
+								elementArray.getJSONObject(i).put("title",rowData[10+j]);
+							}
+							
+							j++;
+						}
 					}
+					
 				} catch( ArrayIndexOutOfBoundsException e ) {
 					elementArray.getJSONObject(i).put("title","");
 				}
 				
 			}
-			System.out.println(elementArray);
 			designJSON.put("elements", elementArray);
 			try {
 				String response = HTTPHelper.getOutputFromURL(url+"services/manual_insert.php?externalOrderId="+externalID+
@@ -151,8 +208,7 @@ public class BatchInputProcessor extends UploadProcessor {
 						"&configJSON="+URLEncoder.encode(configJSON.getJSONArray("items").getJSONObject(0).toString(), "UTF-8")+
 						"&designJSON="+URLEncoder.encode(designJSON.toString(), "UTF-8")+
 						"&productId="+URLEncoder.encode(productID+"", "UTF-8")+
-						"&externalSystem=batchinput"+
-						"&shippingInfo="+URLEncoder.encode(shippingString, "UTF-8"));
+						"&externalSystem=batchinput");
 						
 				if(response.indexOf("1") > 0) {
 					observer.setProgress(0, "Error creating order #"+externalID+" :: "+response);
@@ -183,6 +239,18 @@ public class BatchInputProcessor extends UploadProcessor {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(getInFile()));
 		writeDesigns(observer, reader);
 		observer.setProgress(1, "Done");
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void run2(Observer observer, List<Design2> designs) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

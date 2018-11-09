@@ -32,10 +32,19 @@ import org.tepi.filtertable.FilterTable;
 import org.tepi.filtertable.numberfilter.NumberFilterPopupConfig;
 import org.tepi.filtertable.numberfilter.NumberInterval;
 
+import workstation.processors.BatchInputProcessor;
+import workstation.processors.BatchInputProcessor2;
 import workstation.processors.DesignProcessor;
 import workstation.processors.DesignProcessorFactory;
+import workstation.processors.FedexShippingProcessor;
+import workstation.processors.JaneBatchInputProcessor;
+import workstation.processors.JaneBatchInputProcessor2;
 import workstation.processors.OrderStatusProcessor;
+import workstation.processors.ShippingLabelProcessor;
 import workstation.processors.SummaryProcessor;
+import workstation.processors.UPSShippingProcessor;
+import workstation.processors.ZulilyXSLProcessor;
+import workstation.processors.ZulilyXSLProcessor2;
 
 import com.admin.ui.AdminSerlvetListener;
 import com.admin.ui.CurrentUser;
@@ -83,7 +92,7 @@ import concurrency.JobManager.IOnFinishedListener;
 
 public class WrkstTable extends CustomComponent {
 	
-	private class WorkstationFilterGenerator implements FilterGenerator {
+	public class WorkstationFilterGenerator implements FilterGenerator {
 
 		public WorkstationFilterGenerator() {
 			super();
@@ -641,7 +650,12 @@ public class WrkstTable extends CustomComponent {
 		for(int i=0; i<_processors.length; i++)
 		{
 			final DesignProcessor selectedProcessor = _processors[i];
-			if (selectedProcessor.getClass() != SummaryProcessor.class && selectedProcessor.getClass() != OrderStatusProcessor.class) {
+			if (selectedProcessor.getClass() != SummaryProcessor.class && selectedProcessor.getClass() != OrderStatusProcessor.class
+					&& selectedProcessor.getClass() != FedexShippingProcessor.class && selectedProcessor.getClass() != BatchInputProcessor.class
+					&& selectedProcessor.getClass() != BatchInputProcessor2.class && selectedProcessor.getClass() != JaneBatchInputProcessor.class
+					&& selectedProcessor.getClass() != ZulilyXSLProcessor.class && selectedProcessor.getClass() != ShippingLabelProcessor.class
+					&& selectedProcessor.getClass() != UPSShippingProcessor.class && selectedProcessor.getClass() != JaneBatchInputProcessor2.class
+					&& selectedProcessor.getClass() != ZulilyXSLProcessor2.class) {
 				printMenuItem.addItem(selectedProcessor.getName(), new MenuBar.Command() {
 					@Override
 					public void menuSelected(MenuItem selectedItem) {
@@ -693,6 +707,22 @@ public class WrkstTable extends CustomComponent {
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
 				DesignProcessor p = dpf.getProcessor(DesignProcessorFactory.DesignProcessorType.JaneBatchInput);
+				observableWindow.show();
+				DesignProcessor.startProcessor(p, null);
+				((IObserverListener)p.getObserverUI()).addOnFinishedListener(new IOnFinishedListener() {
+					@Override
+					public void finished(final FinishedEvent e) {
+						//table.refreshRowCache();
+					}
+				});
+				table.refreshRowCache();
+				observableWindow.addObservable(p.getObserverUI());
+			}
+		});
+		batchMenuItem.addItem("Zulily XLS", new MenuBar.Command() {
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				DesignProcessor p = dpf.getProcessor(DesignProcessorFactory.DesignProcessorType.ZulilyXSL);
 				observableWindow.show();
 				DesignProcessor.startProcessor(p, null);
 				((IObserverListener)p.getObserverUI()).addOnFinishedListener(new IOnFinishedListener() {

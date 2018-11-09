@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 import model.Design;
+import model.Design2;
 import workstation.util.Pdf;
 
 import com.itextpdf.text.DocumentException;
@@ -126,5 +127,64 @@ public class MRCanTrioProcessor extends PrintProcessor {
 		downloadResource.setMIMEType("application/pdf");
 		downloadResource.setCacheTime(0);
 		observer.submitResult(downloadResource);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void print2(Observer observer, Design2[] designs) throws Exception {
+		int i = 0;
+		/*Arrays.sort(designs, new Comparator<Design>() {
+			@Override
+			public int compare(Design arg0, Design arg1) {
+					if (arg0.getOrderItem().getId() != arg1.getOrderItem().getId()) {
+						return arg0.getOrderItem().getId() - arg1.getOrderItem().getId();
+					}
+					return arg0.getId() - arg1.getId();
+			}
+		});
+		
+		Rectangle pageSize = new Rectangle(Utilities.millimetersToPoints(_pageWidth), Utilities.millimetersToPoints(_pageHeight));
+		final float marginy = _pageHeight - _marginTop - designs[0].getProduct().getFrameHeight();
+		Pdf p = new Pdf(pageSize);
+		float x = _marginLeft, y = marginy;
+		float total = designs.length;
+		
+		while (i < designs.length) {
+			Design d1 = null, d2 = null, d3 = null;
+			
+			if (y <= 2) {
+				p.addNewPage();
+				x = _marginLeft;
+				y = marginy;
+			}
+			
+			d1 = designs[i];
+			observer.logState("Processing : " +  d1.getOrderItem().getId());
+			i++;
+			if (i < designs.length && d1.getOrderItem().getId() == designs[i].getOrderItem().getId()) {
+				d2 = designs[i];
+				i++;
+				if (i < designs.length && d1.getOrderItem().getId() == designs[i].getOrderItem().getId()) {
+					d3 = designs[i];
+					i++;
+				}
+			} 
+			
+			addDesigntoPDF(d1, d2, d3, p, x, y);
+			x = _marginLeft;
+			y -= (_orderSeperation + d1.getProduct().getFrameHeight());
+			observer.setProgress((float)(i+1) / total);
+		}
+		p.close();
+		observer.setProgress(1, "Done");
+		StreamResource downloadResource = new StreamResource(p, _name + "_" + new SimpleDateFormat("dd-MM-yy").format(new Date()) + ".pdf");
+		downloadResource.setMIMEType("application/pdf");
+		downloadResource.setCacheTime(0);
+		observer.submitResult(downloadResource);*/
 	}
 }

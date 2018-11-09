@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
 
 import model.Design;
+import model.Design2;
 import model.DesignsStateName;
 import model.OrderItem;
 import model.OrderItemsProcessingStageName;
@@ -170,5 +171,19 @@ public class OrderStatusProcessor extends DesignProcessor {
 		//designs.get(0).getContainer().refresh(); //causes a deadlock error, no idea why
         observer.setProgress(1, "Done");
 		observer.submitResult(null);
+	}
+
+	@Override
+	public Component getConfigUI2(List<Design2> designs) {
+		if (configUI == null) {
+			//configUI = new StatusSelector(designs, this);
+			configUI.show();
+		}
+		return configUI;
+	}
+
+	@Override
+	protected void run2(Observer observer, List<Design2> designs) {
+		
 	}
 }
